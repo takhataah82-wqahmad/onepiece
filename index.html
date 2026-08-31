@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>وان‌پدیا | دایره‌المعارف فارسی وان‌پیس</title>
+<meta name="description" content="وان‌پدیا: بزرگ‌ترین مرجع فارسی وان‌پیس شامل شخصیت‌ها، آرک‌ها، میوه‌های شیطانی، هاکی، جوایز سری و نبردهای مهم.">
+<meta property="og:title" content="وان‌پدیا | دایره‌المعارف فارسی وان‌پیس">
+<meta property="og:description" content="شخصیت‌ها، آرک‌ها، میوه‌های شیطانی، هاکی و بیشتر — همه‌چیز درباره‌ی وان‌پیس، به فارسی.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://example.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#081521; --bg2:#0b1f30; --panel:rgba(255,255,255,.04); --panel-b:rgba(212,175,90,.18);
+  --ink:#e9e2cf; --muted:#9fb0bd; --gold:#d4af5a; --gold-2:#f0cd7a; --red:#b1291b; --red-2:#d1432f;
+  --line:rgba(255,255,255,.08); --radius:14px; --font-d:'Lalezar',sans-serif; --font-b:'Vazirmatn',sans-serif;
+}
+[data-theme="light"]{
+  --bg:#f3ecd9; --bg2:#ece0bf; --panel:rgba(255,255,255,.55); --panel-b:rgba(120,90,20,.18);
+  --ink:#25190c; --muted:#5b4a30; --gold:#9c6e17; --gold-2:#7a560f; --red:#a3271a; --red-2:#7d1d13;
+  --line:rgba(0,0,0,.08);
+}
+*{box-sizing:border-box;} html{scroll-behavior:smooth;}
+body{margin:0; background:radial-gradient(1200px 700px at 15% -10%, var(--bg2), var(--bg) 60%); color:var(--ink); font-family:var(--font-b); line-height:1.85; min-height:100vh; transition:background .3s, color .3s;}
+a{color:inherit; text-decoration:none;}
+h1,h2,h3,.disp{font-family:var(--font-d); font-weight:400; letter-spacing:.3px;}
+.wrap{max-width:1180px; margin:0 auto; padding:0 20px;}
+img,svg{max-width:100%; display:block;}
+button{font-family:inherit; cursor:pointer;}
+::selection{background:var(--gold); color:#111;}
+
+/* ---- topbar ---- */
+.topbar{position:sticky; top:0; z-index:50; backdrop-filter:blur(14px); background:rgba(8,21,33,.72); border-bottom:1px solid var(--line);}
+[data-theme="light"] .topbar{background:rgba(243,236,217,.8);}
+.topbar-in{display:flex; align-items:center; gap:18px; padding:14px 20px; max-width:1180px; margin:0 auto;}
+.brand{display:flex; align-items:center; gap:10px; font-family:var(--font-d); font-size:1.5rem; color:var(--gold-2);}
+.brand .skull{width:30px; height:30px;}
+nav.mainnav{display:flex; gap:4px; flex-wrap:wrap; margin-inline-start:10px;}
+nav.mainnav a{padding:8px 12px; border-radius:8px; font-size:.88rem; color:var(--muted); transition:.2s;}
+nav.mainnav a:hover, nav.mainnav a.active{color:var(--gold-2); background:var(--panel);}
+.top-actions{display:flex; align-items:center; gap:8px; margin-inline-start:auto;}
+.icon-btn{width:38px; height:38px; border-radius:9px; border:1px solid var(--panel-b); background:var(--panel); color:var(--ink); display:flex; align-items:center; justify-content:center; font-size:1rem;}
+.searchbox{position:relative; display:flex; align-items:center;}
+.searchbox input{background:var(--panel); border:1px solid var(--panel-b); color:var(--ink); border-radius:9px; padding:8px 14px; font-family:inherit; font-size:.85rem; width:170px; transition:width .2s;}
+.searchbox input:focus{width:230px; outline:none; border-color:var(--gold);}
+.search-results{position:absolute; top:46px; right:0; width:320px; max-height:400px; overflow:auto; background:var(--bg2); border:1px solid var(--panel-b); border-radius:10px; box-shadow:0 20px 40px rgba(0,0,0,.4); display:none; z-index:60;}
+.search-results.show{display:block;}
+.search-results a{display:flex; justify-content:space-between; gap:8px; padding:10px 14px; font-size:.85rem; border-bottom:1px solid var(--line);}
+.search-results a:hover{background:var(--panel);}
+.search-results .tag{font-size:.68rem; color:var(--gold); border:1px solid var(--panel-b); padding:1px 6px; border-radius:5px; white-space:nowrap;}
+.hamburger{display:none;}
+@media (max-width:980px){
+  nav.mainnav{display:none; position:absolute; top:64px; right:0; left:0; background:var(--bg2); flex-direction:column; padding:10px; border-bottom:1px solid var(--line);}
+  nav.mainnav.open{display:flex;}
+  .hamburger{display:flex;}
+  .searchbox input{width:120px;}
+  .searchbox input:focus{width:160px;}
+}
+
+/* ---- hero ---- */
+.page-hero{padding:54px 0 30px; border-bottom:1px solid var(--line);}
+.eyebrow{font-size:.75rem; letter-spacing:3px; text-transform:uppercase; color:var(--red-2); margin-bottom:10px;}
+.page-hero h1{font-size:clamp(2.1rem,5vw,3.4rem); color:var(--gold-2);}
+.page-hero p{color:var(--muted); max-width:680px; margin-top:10px;}
+.crumbs{font-size:.78rem; color:var(--muted); margin-bottom:14px;}
+.crumbs a{color:var(--gold); }
+.crumbs span{opacity:.5; margin:0 6px;}
+
+/* ---- home hero ---- */
+.hero-home{position:relative; padding:80px 0 60px; overflow:hidden; text-align:center;}
+.hero-home::before{content:""; position:absolute; inset:0; background:
+  radial-gradient(1px 1px at 12% 25%, rgba(240,205,122,.5) 50%, transparent 51%),
+  radial-gradient(1px 1px at 80% 15%, rgba(240,205,122,.35) 50%, transparent 51%),
+  radial-gradient(1.5px 1.5px at 60% 70%, rgba(240,205,122,.4) 50%, transparent 51%),
+  radial-gradient(1px 1px at 30% 80%, rgba(240,205,122,.3) 50%, transparent 51%); opacity:.7; pointer-events:none;}
+.hero-home h1{font-size:clamp(2.6rem,8vw,5rem); color:var(--gold-2); text-shadow:0 4px 0 rgba(0,0,0,.3); position:relative;}
+.hero-home p{color:var(--muted); max-width:600px; margin:16px auto 0; position:relative;}
+.hero-search{max-width:520px; margin:34px auto 0; position:relative;}
+.hero-search input{width:100%; padding:16px 20px; border-radius:12px; background:var(--panel); border:1px solid var(--panel-b); color:var(--ink); font-family:inherit; font-size:1rem;}
+.hero-search input:focus{outline:none; border-color:var(--gold);}
+.hero-stats{display:flex; gap:30px; justify-content:center; margin-top:44px; flex-wrap:wrap; position:relative;}
+.hero-stats div{text-align:center;}
+.hero-stats b{font-family:var(--font-d); font-size:1.9rem; color:var(--gold-2); display:block;}
+.hero-stats span{font-size:.78rem; color:var(--muted);}
+
+/* ---- sections/cards ---- */
+section{padding:52px 0;}
+.section-head{display:flex; align-items:baseline; justify-content:space-between; margin-bottom:26px; gap:12px; flex-wrap:wrap;}
+.section-head h2{font-size:1.7rem; color:var(--gold-2);}
+.section-head a.more{font-size:.8rem; color:var(--red-2); border-bottom:1px solid var(--red-2); padding-bottom:2px;}
+.grid{display:grid; gap:16px;}
+.grid.cols-4{grid-template-columns:repeat(4,1fr);}
+.grid.cols-3{grid-template-columns:repeat(3,1fr);}
+.grid.cols-2{grid-template-columns:repeat(2,1fr);}
+@media (max-width:980px){.grid.cols-4{grid-template-columns:repeat(2,1fr);} .grid.cols-3{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:620px){.grid.cols-4,.grid.cols-3,.grid.cols-2{grid-template-columns:1fr;}}
+
+.card{background:var(--panel); border:1px solid var(--panel-b); border-radius:var(--radius); padding:16px; transition:transform .2s,border-color .2s; position:relative;}
+.card:hover{transform:translateY(-4px); border-color:var(--gold);}
+.avatar{width:100%; aspect-ratio:1/1; border-radius:10px; background:linear-gradient(145deg,var(--bg2),var(--bg)); display:flex; align-items:center; justify-content:center; font-family:var(--font-d); font-size:2.2rem; color:var(--gold-2); border:1px solid var(--panel-b); margin-bottom:12px; overflow:hidden;}
+.card h3{font-size:1.05rem; margin-bottom:4px;}
+.card .meta{font-size:.76rem; color:var(--muted);}
+.card .bounty-tag{position:absolute; top:10px; left:10px; background:var(--gold); color:#1a1206; font-size:.68rem; font-family:var(--font-d); padding:3px 8px; border-radius:6px;}
+.fav-btn{position:absolute; top:10px; right:10px; background:rgba(0,0,0,.35); border:none; color:var(--gold-2); width:30px; height:30px; border-radius:50%; font-size:.9rem;}
+.fav-btn.active{background:var(--red);}
+
+/* ---- filter bar ---- */
+.filterbar{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:26px;}
+.filterbar button{padding:7px 14px; border-radius:20px; border:1px solid var(--panel-b); background:var(--panel); color:var(--muted); font-size:.8rem;}
+.filterbar button.active{background:var(--gold); color:#1a1206; border-color:var(--gold);}
+
+/* ---- detail page ---- */
+.detail-grid{display:grid; grid-template-columns:280px 1fr; gap:36px; margin-top:10px;}
+@media (max-width:800px){.detail-grid{grid-template-columns:1fr;}}
+.detail-avatar{width:100%; aspect-ratio:1/1; border-radius:var(--radius); background:linear-gradient(155deg,var(--bg2),var(--bg)); border:1px solid var(--panel-b); display:flex; align-items:center; justify-content:center; font-family:var(--font-d); font-size:4rem; color:var(--gold-2);}
+.stat-table{margin-top:18px; width:100%; border-collapse:collapse; font-size:.86rem;}
+.stat-table tr{border-bottom:1px solid var(--line);}
+.stat-table td{padding:9px 4px; vertical-align:top;}
+.stat-table td:first-child{color:var(--muted); width:40%;}
+.stat-table td:last-child{color:var(--ink); font-weight:600;}
+.tag-row{display:flex; gap:6px; flex-wrap:wrap; margin-top:6px;}
+.tag-row span{background:var(--panel); border:1px solid var(--panel-b); font-size:.72rem; padding:3px 9px; border-radius:20px; color:var(--gold-2);}
+.bio-block{background:var(--panel); border:1px solid var(--panel-b); border-radius:var(--radius); padding:24px; margin-bottom:20px;}
+.bio-block h3{color:var(--gold-2); margin-bottom:10px; font-size:1.25rem;}
+.related-list{display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;}
+.related-list a{background:var(--panel); border:1px solid var(--panel-b); padding:8px 14px; border-radius:9px; font-size:.83rem;}
+.related-list a:hover{border-color:var(--gold);}
+
+/* ---- timeline ---- */
+.route{position:relative; padding-right:26px; border-right:2px dotted var(--panel-b); margin-top:20px;}
+.route-item{position:relative; padding:4px 30px 36px 0;}
+.route-item::before{content:""; position:absolute; right:-32px; top:6px; width:13px; height:13px; border-radius:50%; background:var(--gold); box-shadow:0 0 0 4px var(--bg);}
+.route-item .eb{font-size:.72rem; letter-spacing:2px; color:var(--gold); text-transform:uppercase;}
+.route-item h3{font-size:1.2rem; margin:6px 0;}
+.route-item p{color:var(--muted); font-size:.9rem; max-width:640px;}
+
+/* ---- tables ---- */
+.datatable{width:100%; border-collapse:collapse; font-size:.85rem; margin-top:10px;}
+.datatable th{text-align:right; color:var(--gold-2); padding:10px 8px; border-bottom:2px solid var(--panel-b); font-size:.78rem; letter-spacing:.5px;}
+.datatable td{padding:10px 8px; border-bottom:1px solid var(--line); color:var(--ink);}
+.datatable tr:hover td{background:var(--panel);}
+.badge{font-size:.68rem; padding:2px 8px; border-radius:6px; border:1px solid var(--panel-b);}
+.badge.canon{color:#6fcf97; border-color:#6fcf97;}
+.badge.filler{color:#eb9b6f; border-color:#eb9b6f;}
+.table-wrap{overflow-x:auto;}
+
+/* ---- bounty leaderboard ---- */
+.lb-row{display:grid; grid-template-columns:50px 60px 1fr auto; align-items:center; gap:16px; padding:14px 12px; border-bottom:1px solid var(--line);}
+.lb-rank{font-family:var(--font-d); color:var(--gold); font-size:1.4rem;}
+.lb-row .bounty-amt{font-family:var(--font-d); font-size:1.15rem; color:var(--gold-2);}
+
+/* ---- compare ---- */
+.compare-picker{display:flex; gap:14px; flex-wrap:wrap; margin-bottom:24px;}
+.compare-picker select{background:var(--panel); border:1px solid var(--panel-b); color:var(--ink); padding:10px 14px; border-radius:9px; font-family:inherit;}
+
+/* ---- buttons ---- */
+.btn{display:inline-block; padding:12px 26px; border-radius:9px; background:var(--red); color:#fff; font-family:var(--font-d); font-size:1.05rem; letter-spacing:.5px; border:none;}
+.btn.ghost{background:transparent; border:1px solid var(--panel-b); color:var(--ink); font-family:var(--font-b); font-size:.85rem; padding:9px 18px;}
+
+footer{border-top:1px solid var(--line); padding:40px 20px; text-align:center; color:var(--muted); font-size:.8rem;}
+footer .fnav{display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-bottom:14px;}
+.empty{color:var(--muted); text-align:center; padding:40px 0;}
+:focus-visible{outline:2px solid var(--gold); outline-offset:2px;}
+</style>
+</head>
+<body data-theme="dark">
+
+<div class="topbar">
+  <div class="topbar-in">
+    <a href="#/" class="brand">
+      <svg class="skull" viewBox="0 0 40 40"><circle cx="20" cy="17" r="13" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="15" cy="16" r="2.5" fill="currentColor"/><circle cx="25" cy="16" r="2.5" fill="currentColor"/><path d="M14 24 L11 34 M26 24 L29 34 M20 22 L20 30" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+      وان‌پدیا
+    </a>
+    <button class="icon-btn hamburger" id="hamburgerBtn" aria-label="منو">☰</button>
+    <nav class="mainnav" id="mainNav">
+      <a href="#/characters">شخصیت‌ها</a>
+      <a href="#/arcs">آرک‌ها</a>
+      <a href="#/devil-fruits">میوه‌های شیطانی</a>
+      <a href="#/haki">هاکی</a>
+      <a href="#/bounties">جوایز سری</a>
+      <a href="#/crews">خدمه‌ها و سازمان‌ها</a>
+      <a href="#/battles">نبردها</a>
+      <a href="#/episodes">قسمت‌ها</a>
+      <a href="#/manga">مانگا</a>
+      <a href="#/compare">مقایسه</a>
+      <a href="#/favorites">علاقه‌مندی‌ها</a>
+    </nav>
+    <div class="top-actions">
+      <div class="searchbox">
+        <input id="topSearch" type="text" placeholder="جستجو در وان‌پدیا…" autocomplete="off">
+        <div class="search-results" id="searchResults"></div>
+      </div>
+      <button class="icon-btn" id="themeToggle" aria-label="حالت روشن/تاریک" title="حالت روشن/تاریک">◐</button>
+    </div>
+  </div>
+</div>
+
+<main id="app"></main>
+
+<footer>
+  <div class="fnav">
+    <a href="#/characters">شخصیت‌ها</a><a href="#/arcs">آرک‌ها</a><a href="#/devil-fruits">میوه‌های شیطانی</a>
+    <a href="#/haki">هاکی</a><a href="#/bounties">جوایز سری</a><a href="#/battles">نبردها</a>
+  </div>
+  وان‌پدیا یک پروژه‌ی طرفداری غیررسمی است و ارتباطی با ناشران یا سازندگان رسمی اثر ندارد. تمام حقوق اثر اصلی متعلق به صاحبان آن است.
+</footer>
+
+<script>
+/* =========================================================
+   وان‌پدیا — داده‌های نمونه (ساختار قابل‌توسعه)
+   هر بخش یک آرایه از آبجکت‌هاست؛ برای افزودن مورد جدید،
+   فقط یک آبجکت با همان کلیدها به آرایه‌ی مربوطه اضافه کنید.
+   ========================================================= */
+const DATA = {
+
+characters: [
+  {id:"luffy", name:"مانکی دی. لوفی", alias:"کلاه‌حصیری", age:19, birthday:"۵ می", height:"۱۷۴ سانتی‌متر",
+   devilFruit:"گومو گومو نو می (نوع افسانه‌ای: هیتو هیتو نو می، مدل نیکا)", haki:["هاکی مشاهده","هاکی مسلح","هاکی فرمانروایی"],
+   crew:"straw-hats", crewRole:"ناخدا", bounty:3000000000, occupation:"دزد دریایی", status:"فعال", firstAppearance:"فصل ۱ مانگا",
+   abilities:["بدن کشسان","گیر دوم و چهارم","فرم نیکا"], weapons:["مشت‌های خودش"],
+   relationships:["شانکس (الگو)","ایس (برادرخوانده)","سابو (برادرخوانده)","گارپ (پدربزرگ)"],
+   bio:"لوفی پسری خوش‌قلب و بی‌پروا از دهکده‌ی فوشا است که در کودکی پس از خوردن یک میوه‌ی شیطانی، بدنش کشسان شد. آرزوی او رسیدن به عنوان پادشاه دزدان دریایی و یافتن گنج وان‌پیس است. با وجود ظاهر ساده، در تصمیم‌گیری و وفاداری به خدمه‌اش بسیار جدی است."},
+  {id:"zoro", name:"رورونوا زورو", alias:"شکارچی دزد دریایی", age:21, birthday:"۱۱ نوامبر", height:"۱۸۱ سانتی‌متر",
+   devilFruit:"—", haki:["هاکی مشاهده","هاکی مسلح","هاکی فرمانروایی"], crew:"straw-hats", crewRole:"شمشیرزن",
+   bounty:1111000000, occupation:"دزد دریایی", status:"فعال", firstAppearance:"فصل ۳ مانگا",
+   abilities:["سبک سه‌شمشیره (سانتوریو)"], weapons:["واداو ایچیمونجی","انما","شوسویی"],
+   relationships:["کویینا (رقیب دوران کودکی)","میهاوک (استاد)","لوفی (ناخدا)"],
+   bio:"زورو پیش از پیوستن به لوفی، شکارچی دزدان دریایی بود. هدف او رسیدن به عنوان بزرگ‌ترین شمشیرزن دنیاست، عهدی که با دوست دوران کودکی‌اش کویینا بسته است."},
+  {id:"nami", name:"نامی", alias:"گربه‌ی دزد", age:20, birthday:"۳ ژوئیه", height:"۱۷۰ سانتی‌متر",
+   devilFruit:"—", haki:[], crew:"straw-hats", crewRole:"ناوبر", bounty:366000000, occupation:"دزد دریایی، نقشه‌کش",
+   status:"فعال", firstAppearance:"فصل ۸ مانگا", abilities:["هواشناسی","نقشه‌کشی","کلی‌مه‌تک"], weapons:["کلی‌مه‌تک (چوب هواشناسی)"],
+   relationships:["بل‌مر (مادرخوانده)","نوجیکو (خواهر)"],
+   bio:"نامی در دهکده‌ای تحت سلطه‌ی دزدان دریایی آرلونگ بزرگ شد و برای آزادسازی آن، سال‌ها به‌عنوان دزد کار کرد. رویای او ترسیم نقشه‌ی کامل دنیاست."},
+  {id:"usopp", name:"یوسوپ", alias:"سنیپر کینگ", age:19, birthday:"۱ آوریل", height:"۱۷۶ سانتی‌متر",
+   devilFruit:"—", haki:["هاکی مشاهده"], crew:"straw-hats", crewRole:"تیرانداز", bounty:500000000, occupation:"دزد دریایی، مخترع",
+   status:"فعال", firstAppearance:"فصل ۲۳ مانگا", abilities:["تیراندازی دقیق","دروغ‌سازی خلاقانه","ساخت گلوله‌های ویژه"], weapons:["کابوتو (تیرکمان)"],
+   relationships:["یاسوپ (پدر)","کایا (دوست دوران کودکی)"],
+   bio:"یوسوپ با وجود ترسویی، در لحظات حساس شجاعتی غیرمنتظره از خود نشان می‌دهد. آرزوی او رسیدن به عنوان یک دزد دریایی شجاع مثل پدرش است."},
+  {id:"sanji", name:"وینسموک سانجی", alias:"پای سیاه", age:21, birthday:"۲ مارس", height:"۱۸۰ سانتی‌متر",
+   devilFruit:"—", haki:["هاکی مشاهده","هاکی مسلح"], crew:"straw-hats", crewRole:"آشپز", bounty:1032000000, occupation:"دزد دریایی، آشپز",
+   status:"فعال", firstAppearance:"فصل ۸ مانگا", abilities:["سبک رزمی مبنی بر پا (بلک‌لگ)","حالت جنتلمن"], weapons:["فقط پاهایش"],
+   relationships:["زف (استاد و پدرخوانده)","خانواده وینسموک (خانواده اصلی)"],
+   bio:"سانجی در رستورانی شناور به نام بالتیک بزرگ شد و از استادش زف قول داد هرگز از پاهایش برای آسیب به غیرنظامیان استفاده نکند. رویای او یافتن دریای افسانه‌ای آل‌بلو است."},
+  {id:"chopper", name:"تونی تونی چوپر", alias:"دکتر لاستیکی", age:17, birthday:"۲۴ دسامبر", height:"۹۰ سانتی‌متر",
+   devilFruit:"هیتو هیتو نو می", haki:[], crew:"straw-hats", crewRole:"پزشک", bounty:1000, occupation:"پزشک",
+   status:"فعال", firstAppearance:"فصل ۱۳۴ مانگا", abilities:["تبدیل به هفت فرم مختلف","دانش پزشکی گسترده"], weapons:["ران‌کیک‌ها (داروهای ویژه)"],
+   relationships:["دکتر هیریلوک (پدرخوانده)","دکتر کوره‌آ (استاد)"],
+   bio:"چوپر گوزنی است که پس از خوردن یک میوه‌ی شیطانی، قدرت تبدیل به انسان و صحبت کردن پیدا کرد. آرزوی او درمان هر بیماری در جهان است."},
+  {id:"robin", name:"نیکو رابین", alias:"کودک شیطان", age:30, birthday:"۶ فوریه", height:"۱۸۸ سانتی‌متر",
+   devilFruit:"هانا هانا نو می", haki:["هاکی مشاهده"], crew:"straw-hats", crewRole:"باستان‌شناس", bounty:930000000, occupation:"باستان‌شناس",
+   status:"فعال", firstAppearance:"فصل ۱۱۴ مانگا", abilities:["شکوفاندن اعضای بدن در هر نقطه","خواندن پونگلیف"], weapons:["توانایی خودش"],
+   relationships:["سائول (مربی دوران کودکی)","اوهارا (زادگاه نابودشده)"],
+   bio:"رابین تنها بازمانده‌ی جزیره‌ی اوهاراست که به‌خاطر توانایی خواندن خطوط باستانی پونگلیف، سال‌ها تحت تعقیب دولت جهانی بود. هدف او یافتن حقیقت گمشده‌ی تاریخ است."},
+  {id:"franky", name:"فرانکی", alias:"سایبورگ", age:36, birthday:"۹ مارس", height:"۲۴۰ سانتی‌متر",
+   devilFruit:"—", haki:[], crew:"straw-hats", crewRole:"نجار", bounty:394000000, occupation:"نجار کشتی",
+   status:"فعال", firstAppearance:"فصل ۳۲۸ مانگا", abilities:["بدن نیمه‌مکانیکی","سلاح‌های تعبیه‌شده در بدن"], weapons:["توپ‌های دستی","لیزر"],
+   relationships:["تام (استاد کشتی‌ساز)","آیس‌برگ (شریک سابق)"],
+   bio:"فرانکی نجاری است که پس از یک حادثه، بخش زیادی از بدنش را با قطعات مکانیکی جایگزین کرد. او سازنده‌ی کشتی ثاوزند سانی، کشتی خدمه‌ی کلاه‌حصیری است."},
+  {id:"brook", name:"بروک", alias:"سول کینگ", age:90, birthday:"۳ آوریل", height:"۲۷۷ سانتی‌متر",
+   devilFruit:"یومی یومی نو می", haki:["هاکی مشاهده"], crew:"straw-hats", crewRole:"موسیقی‌دان", bounty:383000000, occupation:"نوازنده",
+   status:"فعال", firstAppearance:"فصل ۴۴۲ مانگا", abilities:["زنده‌ماندن به‌شکل اسکلت","سبک شمشیرزنی روح"], weapons:["شمشیر عصایی"],
+   relationships:["لابون (کشتی سابق)","خدمه‌ی رامبار (خدمه سابق)"],
+   bio:"بروک روزگاری عضو خدمه‌ای دیگر بود که پس از مرگ همه‌ی همراهانش، سال‌ها به‌تنهایی در دریا سرگردان ماند تا اینکه به کلاه‌حصیری‌ها پیوست."},
+  {id:"jinbe", name:"جینبه", alias:"شوالیه دریا", age:46, birthday:"۲ آوریل", height:"۳۰۱ سانتی‌متر",
+   devilFruit:"—", haki:["هاکی مشاهده","هاکی مسلح"], crew:"straw-hats", crewRole:"سکاندار", bounty:1100000000, occupation:"دزد دریایی، شناگر",
+   status:"فعال", firstAppearance:"فصل ۵۲۹ مانگا", abilities:["کاراته مرد-ماهی","شنای فوق‌العاده"], weapons:["نیزه"],
+   relationships:["پادشاه نپتون (متحد)","شاهزاده فیشر تایگر (دوست)"],
+   bio:"جینبه یکی از هفت جنگجوی دریانورد سابق بود و پیش از پیوستن به کلاه‌حصیری‌ها، فرمانده خدمه‌ی خودش بود. او همواره طرفدار صلح میان انسان‌ها و مرد-ماهی‌هاست."},
+  {id:"shanks", name:"شانکس", alias:"شانکس سرخ‌مو", age:41, birthday:"۹ مارس", height:"۱۹۹ سانتی‌متر",
+   devilFruit:"—", haki:["هاکی مشاهده","هاکی مسلح","هاکی فرمانروایی (سطح بالا)"], crew:"red-hair", crewRole:"ناخدا (یونکو)",
+   bounty:4048900000, occupation:"دزد دریایی", status:"فعال", firstAppearance:"فصل ۱ مانگا",
+   abilities:["شمشیرزنی درجه‌یک","هاکی فرمانروایی نادر"], weapons:["شمشیر بلند"],
+   relationships:["لوفی (شاگرد الگو)","روکس دی. میهاوک (رقیب)"],
+   bio:"شانکس یکی از چهار امپراتور دریاست که در کودکی لوفی نقشی تعیین‌کننده در شکل‌گیری آرزوی او داشت. او به آرامش و قدرت بی‌همتایش شناخته می‌شود."},
+  {id:"blackbeard", name:"مارشال دی. تیچ", alias:"ریش‌سیاه", age:40, birthday:"۳ آگوست", height:"۲۴۴ سانتی‌متر",
+   devilFruit:"یامی یامی نو می و گورا گورا نو می", haki:["هاکی مسلح"], crew:"blackbeard", crewRole:"ناخدا (یونکو)",
+   bounty:3996000000, occupation:"دزد دریایی", status:"فعال", firstAppearance:"فصل ۲۲۳ مانگا",
+   abilities:["کنترل تاریکی و جاذبه","توانایی داشتن دو میوه‌ی شیطانی"], weapons:["تفنگ‌های دوتایی"],
+   relationships:["تیچ پیراتس (خدمه)"],
+   bio:"تیچ عضو سابق خدمه‌ی سفیدریش بود که با خیانت به آنها، به یکی از خطرناک‌ترین دزدان دریایی دنیا و یکی از چهار امپراتور تبدیل شد."},
+  {id:"kaido", name:"کایدو", alias:"قدرتمندترین موجود دنیا", age:59, birthday:"۱۳ مه", height:"۷۲۵ سانتی‌متر",
+   devilFruit:"اوئو اوئو نو می، مدل اژدهای آبی افسانه‌ای", haki:["هاکی مشاهده","هاکی مسلح","هاکی فرمانروایی"],
+   crew:"beasts", crewRole:"ناخدا (یونکو سابق)", bounty:4611100000, occupation:"دزد دریایی", status:"شکست‌خورده",
+   firstAppearance:"فصل ۸۰۰ مانگا", abilities:["تبدیل به اژدها","تحمل فوق‌العاده در برابر آسیب"], weapons:["گرز"],
+   relationships:["یاماتو (فرزند)"],
+   bio:"کایدو در آرک وانو به‌عنوان یکی از چهار امپراتور دریا حکومت جزیره‌ی وانو را در دست داشت تا اینکه در نبرد اونیگاشیما شکست خورد."},
+  {id:"bigmom", name:"شارلوت لینلین", alias:"بیگ‌مام", age:69, birthday:"۱۵ فوریه", height:"۸۸۸ سانتی‌متر",
+   devilFruit:"سورو سورو نو می", haki:["هاکی مشاهده","هاکی مسلح","هاکی فرمانروایی"], crew:"bigmom", crewRole:"ناخدا (یونکو)",
+   bounty:4388000000, occupation:"دزد دریایی", status:"فعال", firstAppearance:"فصل ۴۳۵ مانگا",
+   abilities:["کنترل روح از طریق سورو سورو","قدرت فیزیکی عظیم"], weapons:["نپولئون (چتر جادویی)"],
+   relationships:["خانواده‌ی چارلوت (فرزندان متعدد)"],
+   bio:"لینلین یکی از چهار امپراتور دریاست که با کنترل روح موجودات، همراهانی زنده به‌نام هومی خلق می‌کند و بر جزیره‌ی توت‌فرنگی کیک فرمانروایی دارد."},
+  {id:"mihawk", name:"دراکول میهاوک", alias:"چشم شاهین", age:49, birthday:"۱۳ مارس", height:"۱۹۸ سانتی‌متر",
+   devilFruit:"—", haki:["هاکی مسلح"], crew:"none", crewRole:"مستقل", bounty:3590000000, occupation:"شمشیرزن",
+   status:"فعال", firstAppearance:"فصل ۴۸ مانگا", abilities:["برترین شمشیرزن دنیا"], weapons:["یورو گرگو (شمشیر سیاه)"],
+   relationships:["زورو (شاگرد)","شانکس (رقیب قدیمی)"],
+   bio:"میهاوک به‌عنوان بهترین شمشیرزن جهان شناخته می‌شود. او روزگاری یکی از هفت جنگجوی دریانورد بود و اکنون استاد زورو محسوب می‌شود."},
+  {id:"garp", name:"مونکی دی. گارپ", alias:"قهرمان نیروی دریایی", age:78, birthday:"۲۴ ژوئن", height:"۲۱۵ سانتی‌متر",
+   devilFruit:"—", haki:["هاکی مشاهده","هاکی مسلح","هاکی فرمانروایی"], crew:"marines", crewRole:"وایس‌آدمیرال",
+   bounty:0, occupation:"افسر نیروی دریایی", status:"فعال", firstAppearance:"فصل ۹۵ مانگا",
+   abilities:["مشت هاکی فوق‌العاده قدرتمند"], weapons:["مشت‌های خودش"],
+   relationships:["لوفی (نوه)","دراگون (فرزند)","روجر (رقیب قدیمی)"],
+   bio:"گارپ افسری افسانه‌ای در نیروی دریایی است که با وجود فرصت رسیدن به مقام دریاسالار، هرگز آن را نپذیرفت. او پدربزرگ لوفی و روزگاری رقیب گول دی. راجر بود."},
+  {id:"roger", name:"گول دی. راجر", alias:"پادشاه دزدان دریایی", age:53, birthday:"۳۱ دسامبر", height:"۲۷۳ سانتی‌متر",
+   devilFruit:"—", haki:["هاکی مشاهده","هاکی مسلح","هاکی فرمانروایی"], crew:"roger", crewRole:"ناخدا", bounty:5564800000,
+   occupation:"دزد دریایی (درگذشته)", status:"درگذشته", firstAppearance:"فلاش‌بک، فصل ۱ مانگا",
+   abilities:["اولین کسی که وارد نیوورلد شد و به لافتل رسید"], weapons:["شمشیر بلند"],
+   relationships:["رایلی (معاون)","روجه پیراتس (خدمه)"],
+   bio:"راجر اولین کسی بود که به لافتل رسید و گنج وان‌پیس را یافت. اعدام او سرآغاز عصر بزرگ دزدان دریایی شد."},
+  {id:"whitebeard", name:"ادوارد نیوگیت", alias:"سفیدریش", age:72, birthday:"۶ آوریل", height:"۶۶۶ سانتی‌متر",
+   devilFruit:"گورا گورا نو می", haki:["هاکی مشاهده","هاکی مسلح","هاکی فرمانروایی"], crew:"whitebeard", crewRole:"ناخدا (یونکو سابق)",
+   bounty:5046000000, occupation:"دزد دریایی (درگذشته)", status:"درگذشته", firstAppearance:"فلاش‌بک، فصل ۲۳۴ مانگا",
+   abilities:["کنترل لرزش و امواج زلزله‌ای"], weapons:["نایگیاتا (نیزه)"],
+   relationships:["ایس (فرزندخوانده)","مارکو (معاون)"],
+   bio:"نیوگیت روزگاری قدرتمندترین مرد دنیا لقب گرفته بود. او خدمه‌اش را خانواده‌ی واقعی خود می‌دانست و در جنگ مارین‌فورد جان باخت."},
+  {id:"ace", name:"پورتگاس دی. ایس", alias:"ایس آتشین", age:20, birthday:"۱ ژانویه", height:"۱۸۵ سانتی‌متر",
+   devilFruit:"مرا مرا نو می", haki:["هاکی مشاهده","هاکی فرمانروایی"], crew:"whitebeard", crewRole:"فرمانده دسته‌ی دوم",
+   bounty:550000000, occupation:"دزد دریایی (درگذشته)", status:"درگذشته", firstAppearance:"فصل ۱۵۴ مانگا (فلاش‌بک)",
+   abilities:["تبدیل بدن به آتش"], weapons:["مشعل"],
+   relationships:["لوفی (برادرخوانده)","سابو (برادرخوانده)","روجر (پدر بیولوژیک)"],
+   bio:"ایس فرزند گول دی. راجر بود که هویتش را پنهان نگه می‌داشت. او در جنگ مارین‌فورد برای نجات جانش تلاش شد، اما در همان نبرد جان باخت."},
+  {id:"sabo", name:"سابو", alias:"رئیس ستاد ارتش انقلابی", age:22, birthday:"۲۰ مارس", height:"۱۸۷ سانتی‌متر",
+   devilFruit:"مرا مرا نو می (پس از مرگ ایس)", haki:["هاکی مشاهده","هاکی مسلح","هاکی فرمانروایی"], crew:"revolutionary",
+   crewRole:"رئیس ستاد", bounty:602000000, occupation:"عضو ارتش انقلابی", status:"فعال", firstAppearance:"فصل ۵۸۳ مانگا",
+   abilities:["سبک رزمی بدون‌سلاح","کنترل آتش"], weapons:["دستکش"],
+   relationships:["لوفی (برادرخوانده)","ایس (برادرخوانده)","دراگون (رهبر)"],
+   bio:"سابو در کودکی همراه لوفی و ایس بزرگ شد و سپس به ارتش انقلابی پیوست تا برای تغییر نظم جهانی مبارزه کند."},
+  {id:"law", name:"ترافلگار لا", alias:"جراح مرگ", age:26, birthday:"۶ اکتبر", height:"۱۹۱ سانتی‌متر",
+   devilFruit:"اوپه اوپه نو می", haki:["هاکی مشاهده","هاکی مسلح"], crew:"heart", crewRole:"ناخدا", bounty:3000000000,
+   occupation:"دزد دریایی", status:"فعال", firstAppearance:"فصل ۴۹۸ مانگا",
+   abilities:["ایجاد فضای عمل‌جراحی (روم)","جابه‌جایی و تعویض اعضا"], weapons:["کاچیرا (نودَچی)"],
+   relationships:["کورازون (پدرخوانده)","خدمه‌ی قلب (خدمه)"],
+   bio:"لا به‌واسطه‌ی میوه‌ی اوپه اوپه توانایی‌های جراحی خارق‌العاده‌ای دارد. او پس از دوران کودکی سختی که با بیماری آمبر لد گذراند، به یکی از قدرتمندترین ناخداهای نسل جدید تبدیل شد."},
+  {id:"kid", name:"یوستاس کید", alias:"کید کاپیتان", age:23, birthday:"۳ ژانویه", height:"۲۰۵ سانتی‌متر",
+   devilFruit:"جیکی جیکی نو می", haki:["هاکی مشاهده","هاکی مسلح","هاکی فرمانروایی"], crew:"kid", crewRole:"ناخدا",
+   bounty:3000000000, occupation:"دزد دریایی", status:"فعال", firstAppearance:"فصل ۴۹۸ مانگا",
+   abilities:["کنترل مغناطیسی فلزات"], weapons:["دست مکانیکی خودش"],
+   relationships:["کیلر (معاون)"],
+   bio:"کید یکی از سرسخت‌ترین ناخداهای نسل جدید دزدان دریایی است که با کنترل نیروهای مغناطیسی می‌جنگد."},
+  {id:"doflamingo", name:"دون‌کیشوت دوفلامینگو", alias:"فلامینگوی آسمان", age:44, birthday:"۵ اکتبر", height:"۲۰۳ سانتی‌متر",
+   devilFruit:"ایتو ایتو نو می", haki:["هاکی مشاهده","هاکی مسلح","هاکی فرمانروایی"], crew:"donquixote",
+   crewRole:"ناخدا (شیچی‌بوکای سابق)", bounty:340000000, occupation:"دزد دریایی، تاجر اسلحه (سابق)", status:"در بند",
+   firstAppearance:"فصل ۴۹۷ مانگا", abilities:["کنترل بدن و اشیا با نخ"], weapons:["نخ‌های شیطانی"],
+   relationships:["رزینانته/کورازون (برادر)"],
+   bio:"دوفلامینگو حاکم سابق دِرِس‌روزا و از اعضای سابق هفت جنگجوی دریانورد بود که در پس پرده تجارت اسلحه و برده را کنترل می‌کرد."},
+  {id:"akainu", name:"ساکازوکی", alias:"آکاینو (میمون قرمز)", age:57, birthday:"۱۵ فوریه", height:"۲۰۱ سانتی‌متر",
+   devilFruit:"ماگو ماگو نو می", haki:["هاکی مشاهده","هاکی مسلح","هاکی فرمانروایی"], crew:"marines",
+   crewRole:"دریاسالار بزرگ (فلیت‌آدمیرال)", bounty:0, occupation:"افسر نیروی دریایی", status:"فعال",
+   firstAppearance:"فصل ۵۹۵ مانگا", abilities:["تبدیل بدن به گدازه"], weapons:["توانایی خودش"],
+   relationships:["نیروی دریایی (سازمان)"],
+   bio:"ساکازوکی سرسخت‌ترین طرفدار عدالت مطلق در نیروی دریایی است. پس از جنگ مارین‌فورد، به بالاترین مقام نیروی دریایی رسید."},
+  {id:"dragon", name:"مانکی دی. دراگون", alias:"خطرناک‌ترین مرد دنیا", age:61, birthday:"۵ اکتبر", height:"۲۰۴ سانتی‌متر",
+   devilFruit:"نامشخص (احتمالاً کنترل باد)", haki:["نامشخص"], crew:"revolutionary", crewRole:"رهبر",
+   bounty:0, occupation:"رهبر ارتش انقلابی", status:"فعال", firstAppearance:"فصل ۹۶ مانگا",
+   abilities:["کنترل احتمالی آب‌وهوا"], weapons:["نامشخص"],
+   relationships:["لوفی (فرزند)","گارپ (پدر)"],
+   bio:"دراگون رهبر ارتش انقلابی و پدر لوفی است. هدف او سرنگونی نظم موجود دولت جهانی است."}
+],
+
+arcs: [
+  {id:"east-blue", name:"ایست‌بلو", episodes:"۱–۶۱", chapters:"۱–۱۰۰", canon:"کانن", chars:["luffy","zoro","nami","usopp","sanji"],
+   battles:["نبرد لوفی و آرلونگ"],
+   summary:"لوفی سفرش را از دهکده‌ی فوشا آغاز می‌کند و در طول این ساگا، اعضای اصلی خدمه یعنی زورو، نامی، یوسوپ و سانجی یک‌به‌یک به او می‌پیوندند تا آماده‌ی ورود به گرندلاین شوند.",
+   events:["پیوستن زورو به خدمه","نجات نامی از آرلونگ","تشکیل خدمه‌ی پنج‌نفره"]},
+  {id:"alabasta", name:"آلاباستا", episodes:"۶۲–۱۳۵", chapters:"۱۰۱–۲۱۷", canon:"کانن", chars:["luffy","zoro","nami","usopp","sanji","robin"],
+   battles:["نبرد لوفی و کروکودایل"],
+   summary:"خدمه وارد گرندلاین می‌شوند و برای نجات پادشاهی آلاباستا از توطئه‌ی یکی از هفت جنگجوی دریانورد به نام کروکودایل، وارد نبردی بزرگ می‌شوند. رابین در پایان این آرک به خدمه می‌پیوندد.",
+   events:["اولین رویارویی با یک جنگجوی دریانورد","پیوستن رابین به خدمه"]},
+  {id:"skypiea", name:"اسکای‌پیا", episodes:"ۧ۱۴۲–۱۹۵", chapters:"۲۳۶–۳۰۲", canon:"کانن", chars:["luffy","zoro","nami","usopp","sanji","robin","chopper"],
+   battles:["نبرد لوفی و اِنرو"],
+   summary:"خدمه با استفاده از یک رستگاری دریایی به جزیره‌ای در آسمان به نام اسکای‌پیا سفر می‌کنند و با خدای خودخوانده‌ی این سرزمین، اِنرو، روبه‌رو می‌شوند.",
+   events:["کشف جزیره‌ی آسمانی","افشای طلای شهر افسانه‌ای"]},
+  {id:"water7", name:"واتر ۷", episodes:"۲۲۹–۲۶۳", chapters:"۳۲۸–۳۹۷", canon:"کانن", chars:["luffy","zoro","nami","usopp","sanji","robin","chopper"],
+   battles:["نبرد با سازمان سایفر پول ۹"],
+   summary:"خدمه به شهر کشتی‌سازی واتر ۷ می‌رسند، جایی که رابین به‌طور ناگهانی آنها را ترک می‌کند و رازی از گذشته‌اش آشکار می‌شود.",
+   events:["ترک موقت رابین","آسیب دیدن کشتی گوینگ مری","معرفی فرانکی"]},
+  {id:"enies-lobby", name:"انیس لابی", episodes:"۲۶۳–۳۱۲", chapters:"۳۹۸–۴۳۰", canon:"کانن", chars:["luffy","zoro","nami","usopp","sanji","robin","chopper","franky"],
+   battles:["حمله به پایگاه دولت جهانی"],
+   summary:"خدمه برای نجات رابین از چنگ دولت جهانی، رسماً علیه دولت جهانی اعلام جنگ می‌کنند و به پایگاه قضایی انیس لابی حمله می‌برند.",
+   events:["نجات رابین","برافراشتن پرچم خدمه در برابر دولت جهانی","خداحافظی با گوینگ مری"]},
+  {id:"thriller-bark", name:"تریلر بارک", episodes:"۳۳۷–۳۸۱", chapters:"۴۴۱–۴۸۹", canon:"کانن", chars:["luffy","zoro","nami","usopp","sanji","robin","chopper","franky","brook"],
+   battles:["نبرد با گکو موریا"],
+   summary:"خدمه در جزیره‌ای ترسناک با یکی دیگر از جنگجویان دریانورد، گکو موریا، روبه‌رو می‌شوند. بروک در این آرک به خدمه می‌پیوندد.",
+   events:["پیوستن بروک","شکست یک جنگجوی دریانورد دیگر"]},
+  {id:"sabaody", name:"سابائودی", episodes:"۳۸۵–۴۰۵", chapters:"۴۹۰–۵۱۴", canon:"کانن", chars:["luffy","zoro","nami","usopp","sanji","robin","chopper","franky","brook"],
+   battles:["رویارویی با کیزارو"],
+   summary:"در بازار برده‌ی سابائودی، خدمه با یکی از دریاسالاران روبه‌رو شده و به‌شدت شکست می‌خورند؛ رویدادی که باعث پراکنده‌شدن اجباری خدمه برای دو سال می‌شود.",
+   events:["پراکنده‌شدن خدمه","اعلام جنگ به یک یونکو"]},
+  {id:"amazon-lily", name:"آمازون لیلی و ایمپل داون", episodes:"۴۰۶–۴۲۲", chapters:"۵۱۵–۵۴۹", canon:"کانن", chars:["luffy"],
+   battles:["فرار از زندان ایمپل داون"],
+   summary:"لوفی به‌تنهایی برای نجات ایس به زندان زیرآبی ایمپل داون نفوذ می‌کند و در این مسیر با شخصیت‌های کلیدی بسیاری آشنا می‌شود.",
+   events:["نفوذ به عمیق‌ترین زندان دنیا","اتحاد موقت با دشمنان سابق"]},
+  {id:"marineford", name:"مارین‌فورد", episodes:"۴۵۷–۴۸۹", chapters:"۵۵۱–۵۸۰", canon:"کانن", chars:["luffy","whitebeard","ace","garp","akainu","shanks"],
+   battles:["جنگ بزرگ مارین‌فورد"],
+   summary:"بزرگ‌ترین جنگ میان دزدان دریایی و نیروی دریایی برای نجات ایس رخ می‌دهد؛ نبردی که پیامدهای آن مسیر داستان را برای همیشه تغییر می‌دهد.",
+   events:["مرگ سفیدریش","مرگ ایس","پایان جنگ با مداخله‌ی شانکس"]},
+  {id:"fishman-island", name:"جزیره‌ی مرد-ماهی", episodes:"۵۲۰–۵۷۴", chapters:"۶۰۸–۶۵۳", canon:"کانن", chars:["luffy","jinbe"],
+   battles:["نبرد با نیو فیشمن پایریتس"],
+   summary:"خدمه پس از دو سال جدایی دوباره گرد هم می‌آیند و به دنیای زیرآب سفر می‌کنند، جایی که تنش‌های میان انسان و مرد-ماهی‌ها را از نزدیک می‌بینند.",
+   events:["گردهمایی مجدد خدمه","پیوستن غیررسمی جینبه"]},
+  {id:"punk-hazard", name:"پانک هازارد", episodes:"۵۷۹–۶۲۶", chapters:"۶۵۴–۷۰۰", canon:"کانن", chars:["luffy","law"],
+   battles:["رویارویی با سزار کلون"],
+   summary:"خدمه در جزیره‌ای مسموم با ترافلگار لا متحد می‌شوند تا علیه سزار کلون، دانشمندی که سلاح‌های شیمیایی می‌سازد، وارد عمل شوند.",
+   events:["اتحاد موقت با لا"]},
+  {id:"dressrosa", name:"درس‌روزا", episodes:"۶۲۹–۷۴۶", chapters:"۷۰۰–۸۰۱", canon:"کانن", chars:["luffy","law","doflamingo"],
+   battles:["نبرد لوفی و دوفلامینگو"],
+   summary:"در پادشاهی درس‌روزا، خدمه و متحدانشان علیه یکی از قدرتمندترین جنگجویان دریانورد سابق، دوفلامینگو، که تجارت اسلحه و برده را کنترل می‌کند، می‌جنگند.",
+   events:["سقوط دوفلامینگو","آزادی درس‌روزا"]},
+  {id:"zou", name:"زو", episodes:"۷۴۶–۷۷۹", chapters:"۸۰۱–۸۲۴", canon:"کانن", chars:["luffy","law"],
+   battles:[],
+   summary:"خدمه به جزیره‌ای عجیب بر پشت فیلی غول‌پیکر به نام زونیشا سفر می‌کنند و با خدمه‌ی مینک‌ها آشنا می‌شوند.",
+   events:["آشنایی با مینک‌ها","دریافت اطلاعات درباره‌ی وانو"]},
+  {id:"whole-cake", name:"جزیره‌ی توت‌فرنگی کیک", episodes:"۷۸۳–۸۷۸", chapters:"۸۲۵–۹۰۲", canon:"کانن", chars:["luffy","sanji","bigmom"],
+   battles:["فرار از توت‌فرنگی کیک"],
+   summary:"خدمه برای نجات سانجی از یک ازدواج تحمیلی، وارد قلمروی یکی دیگر از امپراتوران دریا، بیگ‌مام، می‌شوند.",
+   events:["نجات سانجی","اتحاد با خانواده‌ی وینسموک"]},
+  {id:"wano", name:"وانو", episodes:"۸۹۰–۱۰۶۲", chapters:"۹۰۹–۱۰۵۳", canon:"کانن", chars:["luffy","zoro","law","kid","kaido"],
+   battles:["نبرد اونیگاشیما"],
+   summary:"بزرگ‌ترین اتحاد دزدان دریایی نسل جدید برای آزادسازی سرزمین وانو از سلطه‌ی دو امپراتور دریا، کایدو و بیگ‌مام، شکل می‌گیرد.",
+   events:["شکست کایدو","به‌دست‌آمدن یکی از یونکو‌بودن لوفی"]},
+  {id:"egghead", name:"اِگ‌هد", episodes:"۱۰۸۵ به بعد", chapters:"۱۰۵۴ به بعد", canon:"کانن", chars:["luffy","robin"],
+   battles:["گریز از نیروهای دریاسالاران"],
+   summary:"خدمه به جزیره‌ی علمی اگ‌هد می‌رسند، جایی که رازهای مهمی درباره‌ی تاریخ گمشده و شخصیت اسرارآمیز ایمو آشکار می‌شود.",
+   events:["آشکارشدن رازهای بزرگ دنیا","رویارویی با چند دریاسالار هم‌زمان"]},
+  {id:"final-saga", name:"ساگای پایانی", episodes:"در حال پخش", chapters:"در حال انتشار", canon:"کانن", chars:["luffy"],
+   battles:[],
+   summary:"داستان وارد آخرین بخش خود شده و به‌تدریج به سمت آشکارسازی راز نهایی دنیا و پایان جست‌وجوی گنج وان‌پیس پیش می‌رود.",
+   events:["در حال پیشرفت"]}
+],
+
+devilFruits: [
+  {id:"gomu-gomu-no-mi", name:"گومو گومو نو می", nameEn:"Gomu Gomu no Mi", type:"پارامیشیا (نوع افسانه‌ای نیکا)", user:"luffy",
+   abilities:"بدن خورنده را کاملاً کشسان می‌کند؛ در فرم بیدارشده، به فرم افسانه‌ای نیکا با قدرت‌های عظیم دسترسی می‌دهد.",
+   weaknesses:"مثل همه‌ی میوه‌های شیطانی، ناتوانی کامل در شنا و ضعف در برابر آب دریا و هاکی مسلح.",
+   awakening:"بله — فرم گیر ۵ (نیکا)", firstAppearance:"فصل ۱ مانگا"},
+  {id:"mera-mera-no-mi", name:"مرا مرا نو می", nameEn:"Mera Mera no Mi", type:"لوگیا", user:"ace",
+   abilities:"بدن خورنده را به آتش تبدیل می‌کند و امکان تولید و کنترل شعله‌های بزرگ را می‌دهد.",
+   weaknesses:"آسیب‌پذیر در برابر سلاح‌های ساخته‌شده از سنگ سی‌پرو‌می و هاکی مسلح.",
+   awakening:"نامشخص", firstAppearance:"فصل ۲۳۵ مانگا (فلاش‌بک)"},
+  {id:"hie-hie-no-mi", name:"هیه هیه نو می", nameEn:"Hie Hie no Mi", type:"لوگیا", user:"دریاسالار آئوکیجی",
+   abilities:"بدن خورنده را به یخ تبدیل می‌کند و امکان انجماد دریا و اشیا را فراهم می‌سازد.",
+   weaknesses:"سلاح‌های سی‌پرو‌می و هاکی مسلح.", awakening:"نامشخص", firstAppearance:"فصل ۱۱۴ مانگا"},
+  {id:"yami-yami-no-mi", name:"یامی یامی نو می", nameEn:"Yami Yami no Mi", type:"لوگیا", user:"blackbeard",
+   abilities:"کنترل تاریکی و جاذبه؛ توانایی خنثی‌کردن قدرت میوه‌های شیطانی دیگران در تماس مستقیم.",
+   weaknesses:"برخلاف اکثر لوگیاها، بدن خورنده در برابر ضربات فیزیکی آسیب‌پذیرتر می‌شود.", awakening:"نامشخص", firstAppearance:"فصل ۵۵۴ مانگا"},
+  {id:"gura-gura-no-mi", name:"گورا گورا نو می", nameEn:"Gura Gura no Mi", type:"پارامیشیا", user:"whitebeard (سپس blackbeard)",
+   abilities:"توانایی ایجاد لرزش‌های عظیم؛ می‌تواند هوا و دریا را نیز مانند جامدات بلرزاند.",
+   weaknesses:"محدودیت در دامنه‌ی اثر و نیاز به تماس یا ضربه برای فعال‌سازی.", awakening:"نامشخص", firstAppearance:"فصل ۲۳۴ مانگا (فلاش‌بک)"},
+  {id:"ope-ope-no-mi", name:"اوپه اوپه نو می", nameEn:"Ope Ope no Mi", type:"پارامیشیا", user:"law",
+   abilities:"ایجاد یک فضای کروی (روم) که در آن خورنده می‌تواند اشیا و اعضای بدن را جابه‌جا، تعویض یا جراحی کند.",
+   weaknesses:"استفاده از قوی‌ترین توانایی آن (اعطای جاودانگی) به قیمت جان کاربر تمام می‌شود.", awakening:"بله", firstAppearance:"فصل ۵۰۶ مانگا"},
+  {id:"ito-ito-no-mi", name:"ایتو ایتو نو می", nameEn:"Ito Ito no Mi", type:"پارامیشیا", user:"doflamingo",
+   abilities:"تولید و کنترل نخ‌های فوق‌العاده تیز و مقاوم برای حمله، دفاع و کنترل حرکت دیگران مانند عروسک.",
+   weaknesses:"نیاز به دقت و تمرکز بالا برای کنترل هم‌زمان نخ‌های متعدد.", awakening:"بله", firstAppearance:"فصل ۷۰۰ مانگا"},
+  {id:"uo-uo-no-mi", name:"اوئو اوئو نو می", nameEn:"Uo Uo no Mi", type:"زوآن (نوع افسانه‌ای)", user:"kaido",
+   abilities:"تبدیل کامل یا نیمه به اژدهای آبی افسانه‌ای با توانایی پرواز و دمیدن طوفان و رعد.",
+   weaknesses:"محدودیت‌های عمومی فرم زوآن در برابر سلاح‌های سی‌پرو‌می.", awakening:"نامشخص", firstAppearance:"فصل ۸۰۰ مانگا"},
+  {id:"soru-soru-no-mi", name:"سورو سورو نو می", nameEn:"Soru Soru no Mi", type:"پارامیشیا", user:"bigmom",
+   abilities:"توانایی بیرون‌کشیدن بخشی از روح افراد برای طول عمر بخشیدن به اشیا (هومی) یا کاهش طول عمر قربانیان.",
+   weaknesses:"وابستگی روانی خورنده به احساسات؛ ترس شدید می‌تواند کنترل قدرت را مختل کند.", awakening:"نامشخص", firstAppearance:"فصل ۸۶۸ مانگا"},
+  {id:"hito-hito-no-mi", name:"هیتو هیتو نو می", nameEn:"Hito Hito no Mi", type:"زوآن", user:"chopper",
+   abilities:"به یک گوزن معمولی توانایی تبدیل به هفت فرم مختلف انسان‌گونه و افزایش هوش را می‌دهد.",
+   weaknesses:"محدودیت‌های عمومی زوآن و وابستگی به مصرف انرژی بالا در فرم‌های قدرتمندتر.", awakening:"نامشخص", firstAppearance:"فصل ۱۴۱ مانگا"}
+],
+
+crews: [
+  {id:"straw-hats", name:"دزدان دریایی کلاه‌حصیری", leader:"luffy", type:"خدمه‌ی دزدان دریایی",
+   desc:"خدمه‌ی اصلی داستان به رهبری لوفی که هدفش رسیدن به وان‌پیس و کمک به هرکدام از اعضا برای رسیدن به رویای شخصی‌شان است.",
+   members:["luffy","zoro","nami","usopp","sanji","chopper","robin","franky","brook","jinbe"]},
+  {id:"red-hair", name:"دزدان دریایی سرخ‌مو", leader:"shanks", type:"خدمه‌ی یونکو",
+   desc:"یکی از خدمه‌های تحت فرمان چهار امپراتور دریا که به وفاداری و آرامش نسبی نسبت به سایر خدمه‌های یونکو شناخته می‌شود.",
+   members:["shanks"]},
+  {id:"whitebeard", name:"دزدان دریایی سفیدریش", leader:"whitebeard", type:"خدمه‌ی یونکو (سابق)",
+   desc:"روزگاری قدرتمندترین خدمه‌ی دریا به رهبری ادوارد نیوگیت که پس از جنگ مارین‌فورد از هم پاشید.",
+   members:["whitebeard","ace"]},
+  {id:"blackbeard", name:"دزدان دریایی ریش‌سیاه", leader:"blackbeard", type:"خدمه‌ی یونکو",
+   desc:"خدمه‌ای که پس از خیانت تیچ به سفیدریش شکل گرفت و با به‌دست‌آوردن دو میوه‌ی شیطانی هم‌زمان، به یکی از خطرناک‌ترین نیروهای دریا تبدیل شد.",
+   members:["blackbeard"]},
+  {id:"beasts", name:"دزدان دریایی جانوران (بیستس)", leader:"kaido", type:"خدمه‌ی یونکو (سابق)",
+   desc:"خدمه‌ی تحت فرمان کایدو که پیش از شکست در وانو، حکومت این سرزمین را در دست داشت.",
+   members:["kaido"]},
+  {id:"bigmom", name:"دزدان دریایی بیگ‌مام", leader:"bigmom", type:"خدمه‌ی یونکو",
+   desc:"خدمه‌ای گسترده و خانوادگی به رهبری شارلوت لینلین که قلمروش جزیره‌ی توت‌فرنگی کیک است.",
+   members:["bigmom"]},
+  {id:"marines", name:"نیروی دریایی", leader:"akainu", type:"نیروی نظامی دولت جهانی",
+   desc:"نیروی رسمی دریایی دولت جهانی که وظیفه‌ی مقابله با دزدان دریایی را برعهده دارد.",
+   members:["garp","akainu"]},
+  {id:"revolutionary", name:"ارتش انقلابی", leader:"dragon", type:"سازمان مبارز",
+   desc:"سازمانی مخفی که هدف آن سرنگونی نظم موجود دولت جهانی و آزادسازی سرزمین‌های تحت ستم است.",
+   members:["dragon","sabo"]}
+],
+
+battles: [
+  {id:"marineford-war", name:"جنگ بزرگ مارین‌فورد", arc:"marineford", location:"مارین‌فورد", participants:"نیروی دریایی در برابر خدمه‌ی سفیدریش و متحدان",
+   result:"نیروی دریایی از نظر تلفات پیروز اعلام شد، اما شانکس با مداخله‌ی خود جنگ را متوقف کرد."},
+  {id:"enies-lobby-raid", name:"حمله به انیس لابی", arc:"enies-lobby", location:"انیس لابی", participants:"خدمه‌ی کلاه‌حصیری در برابر سایفر پول ۹ و نیروی دریایی",
+   result:"خدمه موفق به نجات رابین شدند و رسماً پرچم جنگ علیه دولت جهانی را برافراشتند."},
+  {id:"onigashima-raid", name:"نبرد اونیگاشیما", arc:"wano", location:"اونیگاشیما، وانو", participants:"اتحاد دزدان دریایی و سامورایی‌ها در برابر کایدو و بیگ‌مام",
+   result:"کایدو شکست خورد و وانو از سلطه‌ی او آزاد شد."},
+  {id:"alabasta-final", name:"نبرد پایانی آلاباستا", arc:"alabasta", location:"آلابانا (آلاباستا)", participants:"لوفی در برابر کروکودایل",
+   result:"کروکودایل شکست خورد و توطئه علیه پادشاهی آلاباستا خنثی شد."},
+  {id:"water7-cp9", name:"نبرد با سایفر پول ۹", arc:"water7", location:"واتر ۷ و برج عدالت", participants:"خدمه‌ی کلاه‌حصیری در برابر عوامل سایفر پول ۹",
+   result:"خدمه با وجود آسیب فراوان، توانستند فرار کنند و رابین را از دست عوامل دولتی خارج سازند."},
+  {id:"sabaody-kizaru", name:"رویارویی با کیزارو در سابائودی", arc:"sabaody", location:"جزیره‌ی سابائودی", participants:"خدمه‌ی کلاه‌حصیری در برابر دریاسالار کیزارو",
+   result:"خدمه به‌شدت شکست خورده و به‌طور اجباری برای مدت دو سال از هم جدا شدند."},
+  {id:"dressrosa-final", name:"نبرد لوفی و دوفلامینگو", arc:"dressrosa", location:"درس‌روزا", participants:"لوفی و متحدان در برابر دوفلامینگو",
+   result:"دوفلامینگو شکست خورد و بازار برده و اسلحه‌ی زیرزمینی او تعطیل شد."},
+  {id:"egghead-escape", name:"گریز از اگ‌هد", arc:"egghead", location:"جزیره‌ی اگ‌هد", participants:"خدمه‌ی کلاه‌حصیری در برابر چند دریاسالار هم‌زمان",
+   result:"خدمه با کمک متحدان جدید موفق به فرار از محاصره‌ی نیروی دریایی شدند."}
+],
+
+episodes: [
+  {num:1, title:"من لوفی‌ام! کسی که پادشاه دزدان دریایی می‌شود!", date:"۱۹۹۹/۱۰/۲۰", arc:"east-blue", chapter:1, canon:true, desc:"معرفی لوفی و آغاز سفر او برای یافتن خدمه."},
+  {num:8, title:"شمشیرزنی که به‌دنبال شکارش می‌آید", date:"۱۹۹۹/۱۲/۰۸", arc:"east-blue", chapter:5, canon:true, desc:"پیوستن زورو به‌عنوان اولین عضو خدمه."},
+  {num:44, title:"ورود به گرندلاین", date:"۲۰۰۰/۰۹/۲۰", arc:"alabasta", chapter:100, canon:true, desc:"خدمه رسماً وارد گرندلاین می‌شوند."},
+  {num:91, title:"نبرد در آلابانا", date:"۲۰۰۱/۰۹/۱۹", arc:"alabasta", chapter:180, canon:true, desc:"اوج درگیری خدمه با نیروهای کروکودایل."},
+  {num:196, title:"رسیدن به جزیره‌ی آسمانی", date:"۲۰۰۲/۰۶/۰۶", arc:"skypiea", chapter:238, canon:true, desc:"ورود خدمه به دنیای عجیب اسکای‌پیا."},
+  {num:278, title:"طوفانی به‌نام رابین", date:"۲۰۰۴/۰۲/۱۵", arc:"water7", chapter:398, canon:true, desc:"افشای راز گذشته‌ی رابین در واتر ۷."},
+  {num:312, title:"سقوط برج عدالت", date:"۲۰۰۵/۰۱/۳۰", arc:"enies-lobby", chapter:430, canon:true, desc:"نبرد نهایی برای نجات رابین."},
+  {num:489, title:"دو قهرمان", date:"۲۰۱۱/۰۳/۰۶", arc:"marineford", chapter:580, canon:true, desc:"پایان جنگ مارین‌فورد و مرگ ایس."},
+  {num:517, title:"دوباره باهم! قول دو سال بعد", date:"۲۰۱۱/۱۰/۰۲", arc:"fishman-island", chapter:598, canon:true, desc:"گردهمایی مجدد خدمه پس از دو سال."},
+  {num:629, title:"ورود به درس‌روزا", date:"۲۰۱۳/۱۰/۲۰", arc:"dressrosa", chapter:700, canon:true, desc:"آغاز ماجراهای پادشاهی درس‌روزا."},
+  {num:892, title:"سرزمین سامورایی‌ها", date:"۲۰۱۹/۱۱/۰۳", arc:"wano", chapter:909, canon:true, desc:"ورود خدمه به وانو."},
+  {num:1015, title:"شکست کایدو", date:"۲۰۲۲/۰۸/۰۶", arc:"wano", chapter:1046, canon:true, desc:"لحظه‌ی نهایی نبرد اونیگاشیما."}
+],
+
+manga: [
+  {num:1, title:"رومنس داون", arc:"east-blue", info:"شماره‌ی ویژه‌ی جامپ، ۱۹۹۷", summary:"لوفی سفر خود را برای یافتن خدمه آغاز می‌کند.", events:["معرفی لوفی و آرزوی او"]},
+  {num:100, title:"ورود به آلاباستا", arc:"alabasta", info:"مجله‌ی هفتگی شونن جامپ", summary:"خدمه پس از عبور از دروازه‌ی گرندلاین، وارد آلاباستا می‌شوند.", events:["آغاز آرک آلاباستا"]},
+  {num:236, title:"سفیدریش", arc:"marineford", info:"مجله‌ی هفتگی شونن جامپ", summary:"معرفی گذشته‌ی خدمه‌ی سفیدریش و قدرت واقعی گورا گورا نو می.", events:["فلاش‌بک سفیدریش"]},
+  {num:398, title:"رازی به‌نام رابین", arc:"water7", info:"مجله‌ی هفتگی شونن جامپ", summary:"رابین دلیل واقعی ترک خدمه را برای اسپاندام آشکار می‌کند.", events:["افشای پیمان رابین"]},
+  {num:430, title:"ما هم‌اکنون همراهانیم", arc:"enies-lobby", info:"مجله‌ی هفتگی شونن جامپ", summary:"رابین رسماً تصمیم می‌گیرد زنده بماند و در کنار خدمه بجنگد.", events:["پایان بحران انیس لابی"]},
+  {num:580, title:"جدید دنیای جدید", arc:"marineford", info:"مجله‌ی هفتگی شونن جامپ", summary:"پس از جنگ مارین‌فورد، لوفی برای بازسازی روحیه‌اش عزلت می‌گزیند.", events:["پایان ساگای مارین‌فورد"]},
+  {num:598, title:"وعده‌ی دو سال", arc:"fishman-island", info:"مجله‌ی هفتگی شونن جامپ", summary:"اعضای خدمه پس از تمرین دو ساله، در سابائودی گرد هم می‌آیند.", events:["پایان دوران جدایی"]},
+  {num:700, title:"شکار در درس‌روزا", arc:"dressrosa", info:"مجله‌ی هفتگی شونن جامپ", summary:"شخصیت‌های بسیاری از سراسر دنیا در پادشاهی درس‌روزا به هم می‌رسند.", events:["آغاز آرک درس‌روزا"]},
+  {num:909, title:"سرزمین وانو", arc:"wano", info:"مجله‌ی هفتگی شونن جامپ", summary:"خدمه سرانجام پس از سفری طولانی وارد کشور وانو می‌شوند.", events:["آغاز آرک وانو"]},
+  {num:1046, title:"لحظه‌ی سقوط", arc:"wano", info:"مجله‌ی هفتگی شونن جامپ", summary:"کایدو در نهایت در نبردی نفس‌گیر با لوفی شکست می‌خورد.", events:["پایان نبرد اونیگاشیما"]},
+  {num:1053, title:"پایان یک عصر", arc:"wano", info:"مجله‌ی هفتگی شونن جامپ", summary:"وانو رسماً آزاد می‌شود و دوران جدیدی برای این سرزمین آغاز می‌شود.", events:["پایان آرک وانو"]},
+  {num:1085, title:"جزیره‌ی دانش", arc:"egghead", info:"مجله‌ی هفتگی شونن جامپ", summary:"خدمه در جزیره‌ی علمی اگ‌هد با حقایق تازه‌ای از تاریخ جهان روبه‌رو می‌شوند.", events:["آغاز آرک اگ‌هد"]}
+],
+
+haki: {
+  intro:"هاکی نیرویی نهفته در روح هر موجود زنده است که تنها عده‌ی کمی می‌توانند آن را بیدار و کنترل کنند. سه نوع اصلی هاکی وجود دارد که هرکدام کاربردهای متفاوتی دارند.",
+  types:[
+    {name:"هاکی مشاهده (کِنبونشوکو)", desc:"توانایی حس‌کردن حضور، نیت و حتی حرکات آینده‌ی دیگران پیش از وقوع آنها. در سطوح پیشرفته می‌تواند به دیدن آینده‌ی نزدیک منجر شود."},
+    {name:"هاکی مسلح (بوسوشوکو)", desc:"پوششی نامرئی از انرژی روحی که روی بدن یا سلاح کشیده می‌شود؛ هم برای حمله و هم دفاع کاربرد دارد و تنها راه آسیب‌زدن به کاربران میوه‌ی لوگیا به‌شمار می‌رود."},
+    {name:"هاکی فرمانروایی (هائوشوکو)", desc:"نادرترین نوع هاکی که تنها در میان یک نفر از هر چند میلیون نفر یافت می‌شود؛ به کاربر امکان می‌دهد اراده‌ی خود را بر افراد ضعیف‌تر تحمیل کند و آنها را بی‌هوش سازد."}
+  ],
+  advanced:"در سطوح پیشرفته، هاکی فرمانروایی می‌تواند به‌صورت هدفمند روی افراد خاص اعمال شود یا حتی در قالب موج شوک استفاده گردد؛ و هاکی مسلح در بالاترین سطح می‌تواند به‌شکل نامرئی درآید.",
+  knownUsers:["luffy","zoro","shanks","kaido","bigmom","garp","roger","whitebeard","doflamingo","law","kid","akainu","dragon"]
+}
+};
+
+/* =========================================================
+   توابع کمکی
+   ========================================================= */
+const $ = (sel,el=document)=>el.querySelector(sel);
+const $$ = (sel,el=document)=>[...el.querySelectorAll(sel)];
+const app = $("#app");
+
+function byId(arr,id){ return arr.find(x=>x.id===id); }
+function charName(id){ const c=byId(DATA.characters,id); return c? c.name : id; }
+function arcName(id){ const a=byId(DATA.arcs,id); return a? a.name : id; }
+function crewName(id){ const c=byId(DATA.crews,id); return c? c.name : (id==="none"?"بدون خدمه":id); }
+function fmtBounty(n){ return n>0 ? "฿ "+n.toLocaleString("en-US") : "نامشخص"; }
+function initials(name){ return name.trim().split(" ")[0].slice(0,2); }
+function setMeta(title, desc){
+  document.title = title+" | وان‌پدیا";
+  let m = document.querySelector('meta[name="description"]');
+  if(m) m.setAttribute("content", desc || title);
+}
+function injectJSONLD(obj){
+  let old = document.getElementById("ld-json");
+  if(old) old.remove();
+  const s = document.createElement("script");
+  s.type = "application/ld+json"; s.id = "ld-json";
+  s.textContent = JSON.stringify(obj);
+  document.head.appendChild(s);
+}
+
+/* ---- favorites & recently viewed (localStorage) ---- */
+function getFavs(){ try{ return JSON.parse(localStorage.getItem("op_favs")||"[]"); }catch(e){ return []; } }
+function saveFavs(list){ localStorage.setItem("op_favs", JSON.stringify(list)); }
+function isFav(type,id){ return getFavs().some(f=>f.type===type && f.id===id); }
+function toggleFav(type,id,label){
+  let favs = getFavs();
+  const idx = favs.findIndex(f=>f.type===type && f.id===id);
+  if(idx>-1) favs.splice(idx,1); else favs.push({type,id,label});
+  saveFavs(favs);
+}
+function pushRecent(type,id,label){
+  let r = JSON.parse(localStorage.getItem("op_recent")||"[]");
+  r = r.filter(x=> !(x.type===type && x.id===id));
+  r.unshift({type,id,label});
+  r = r.slice(0,6);
+  localStorage.setItem("op_recent", JSON.stringify(r));
+}
+function getRecent(){ try{ return JSON.parse(localStorage.getItem("op_recent")||"[]"); }catch(e){ return []; } }
+
+/* ---- global search index ---- */
+function searchIndex(q){
+  q = q.trim().toLowerCase();
+  if(!q) return [];
+  const out = [];
+  DATA.characters.forEach(c=>{ if(c.name.toLowerCase().includes(q)||c.alias.toLowerCase().includes(q)) out.push({type:"شخصیت",label:c.name,href:"#/characters/"+c.id}); });
+  DATA.arcs.forEach(a=>{ if(a.name.toLowerCase().includes(q)) out.push({type:"آرک",label:a.name,href:"#/arcs/"+a.id}); });
+  DATA.devilFruits.forEach(d=>{ if(d.name.toLowerCase().includes(q)||d.nameEn.toLowerCase().includes(q)) out.push({type:"میوه شیطانی",label:d.name,href:"#/devil-fruits/"+d.id}); });
+  DATA.crews.forEach(c=>{ if(c.name.toLowerCase().includes(q)) out.push({type:"خدمه",label:c.name,href:"#/crews/"+c.id}); });
+  return out.slice(0,10);
+}
+
+/* =========================================================
+   قالب‌های کارت (Templates)
+   ========================================================= */
+function charCard(c){
+  const fav = isFav("character",c.id);
+  return `<div class="card">
+    <button class="fav-btn ${fav?"active":""}" data-fav="character:${c.id}:${c.name}" aria-label="افزودن به علاقه‌مندی‌ها">${fav?"★":"☆"}</button>
+    ${c.bounty>0?`<span class="bounty-tag">${fmtBounty(c.bounty)}</span>`:""}
+    <a href="#/characters/${c.id}">
+      <div class="avatar">${initials(c.name)}</div>
+      <h3>${c.name}</h3>
+      <div class="meta">${c.alias} · ${crewName(c.crew)}</div>
+    </a>
+  </div>`;
+}
+function arcCard(a){
+  return `<a href="#/arcs/${a.id}" class="card">
+    <div class="avatar" style="font-size:1.1rem;">${a.name.slice(0,2)}</div>
+    <h3>${a.name}</h3>
+    <div class="meta">قسمت ${a.episodes} · فصل ${a.chapters}</div>
+  </a>`;
+}
+function fruitCard(f){
+  return `<a href="#/devil-fruits/${f.id}" class="card">
+    <div class="avatar">🍈</div>
+    <h3>${f.name}</h3>
+    <div class="meta">${f.type} · کاربر: ${typeof byId(DATA.characters,f.user)==="object"?charName(f.user):f.user}</div>
+  </a>`;
+}
+function crewCard(c){
+  return `<a href="#/crews/${c.id}" class="card">
+    <div class="avatar">⚑</div>
+    <h3>${c.name}</h3>
+    <div class="meta">${c.type} · رهبر: ${charName(c.leader)}</div>
+  </a>`;
+}
+function crumbs(items){
+  return `<div class="crumbs">${items.map((it,i)=> i<items.length-1 ? `<a href="${it.href}">${it.label}</a><span>/</span>` : `${it.label}`).join("")}</div>`;
+}
+
+/* =========================================================
+   صفحات (Views)
+   ========================================================= */
+function viewHome(){
+  setMeta("وان‌پدیا | دایره‌المعارف فارسی وان‌پیس","بزرگ‌ترین مرجع فارسی وان‌پیس؛ شخصیت‌ها، آرک‌ها، میوه‌های شیطانی، هاکی و بیشتر.");
+  injectJSONLD({"@context":"https://schema.org","@type":"WebSite","name":"وان‌پدیا","url":"https://example.com/"});
+  const topBounty = [...DATA.characters].sort((a,b)=>b.bounty-a.bounty).slice(0,4);
+  const arcsShow = DATA.arcs.slice(0,4);
+  const fruitsShow = DATA.devilFruits.slice(0,4);
+  const crewsShow = DATA.crews.slice(0,4);
+  app.innerHTML = `
+  <section class="hero-home wrap">
+    <div class="eyebrow">یک نقشه، هزار جزیره، یک رویا</div>
+    <h1 class="disp">وان‌پدیا</h1>
+    <p>مرجع فارسی شخصیت‌ها، آرک‌ها، میوه‌های شیطانی، هاکی، جوایز سری و نبردهای بزرگ دنیای وان‌پیس.</p>
+    <div class="hero-search">
+      <input type="text" id="homeSearch" placeholder="نام شخصیت، آرک یا میوه‌ی شیطانی را جستجو کنید…" autocomplete="off">
+      <div class="search-results" id="homeSearchResults"></div>
+    </div>
+    <div class="hero-stats">
+      <div><b>${DATA.characters.length}+</b><span>شخصیت</span></div>
+      <div><b>${DATA.arcs.length}</b><span>آرک</span></div>
+      <div><b>${DATA.devilFruits.length}+</b><span>میوه‌ی شیطانی</span></div>
+      <div><b>${DATA.battles.length}+</b><span>نبرد مهم</span></div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="section-head"><h2>شخصیت‌های پرجایزه</h2><a class="more" href="#/bounties">مشاهده‌ی رتبه‌بندی کامل ←</a></div>
+    <div class="grid cols-4">${topBounty.map(charCard).join("")}</div>
+  </section>
+
+  <section class="wrap">
+    <div class="section-head"><h2>آرک‌های محبوب</h2><a class="more" href="#/arcs">همه‌ی آرک‌ها ←</a></div>
+    <div class="grid cols-4">${arcsShow.map(arcCard).join("")}</div>
+  </section>
+
+  <section class="wrap">
+    <div class="section-head"><h2>میوه‌های شیطانی برگزیده</h2><a class="more" href="#/devil-fruits">همه‌ی میوه‌ها ←</a></div>
+    <div class="grid cols-4">${fruitsShow.map(fruitCard).join("")}</div>
+  </section>
+
+  <section class="wrap">
+    <div class="section-head"><h2>خدمه‌ها و سازمان‌ها</h2><a class="more" href="#/crews">مشاهده‌ی همه ←</a></div>
+    <div class="grid cols-4">${crewsShow.map(crewCard).join("")}</div>
+  </section>
+
+  <section class="wrap">
+    <div class="section-head"><h2 style="color:var(--red-2)">دسترسی سریع</h2></div>
+    <div class="grid cols-4">
+      <a class="card" href="#/haki"><div class="avatar">気</div><h3>هاکی</h3><div class="meta">مشاهده، مسلح، فرمانروایی</div></a>
+      <a class="card" href="#/battles"><div class="avatar">⚔</div><h3>نبردهای مهم</h3><div class="meta">${DATA.battles.length} نبرد کلیدی</div></a>
+      <a class="card" href="#/episodes"><div class="avatar">▶</div><h3>قسمت‌ها</h3><div class="meta">پایگاه‌داده‌ی قسمت‌ها</div></a>
+      <a class="card" href="#/manga"><div class="avatar">📖</div><h3>مانگا</h3><div class="meta">پایگاه‌داده‌ی فصل‌ها</div></a>
+    </div>
+  </section>`;
+
+  const hs = $("#homeSearch"), hr = $("#homeSearchResults");
+  hs.addEventListener("input", ()=>{
+    const res = searchIndex(hs.value);
+    hr.innerHTML = res.length ? res.map(r=>`<a href="${r.href}">${r.label}<span class="tag">${r.type}</span></a>`).join("") : `<div style="padding:14px;color:var(--muted);font-size:.85rem;">نتیجه‌ای یافت نشد</div>`;
+    hr.classList.toggle("show", hs.value.trim().length>0);
+  });
+}
+
+function viewCharacterList(){
+  setMeta("شخصیت‌های وان‌پیس","فهرست کامل شخصیت‌های وان‌پیس با جزئیات کامل: میوه‌ی شیطانی، هاکی، جایزه‌ی سری و بیوگرافی.");
+  const crewsSet = ["all", ...new Set(DATA.characters.map(c=>c.crew))];
+  let activeCrew = "all";
+  function render(){
+    const list = DATA.characters.filter(c=> activeCrew==="all" || c.crew===activeCrew);
+    $("#charGrid").innerHTML = list.length ? list.map(charCard).join("") : `<div class="empty">شخصیتی یافت نشد.</div>`;
+    bindFavButtons();
+  }
+  app.innerHTML = `
+  <div class="page-hero wrap">
+    ${crumbs([{href:"#/",label:"خانه"},{label:"شخصیت‌ها"}])}
+    <div class="eyebrow">دایره‌المعارف</div>
+    <h1>شخصیت‌های وان‌پیس</h1>
+    <p>از خدمه‌ی کلاه‌حصیری تا امپراتوران دریا و دریاسالاران — فهرست کامل شخصیت‌های داستان با جزئیات.</p>
+  </div>
+  <section class="wrap">
+    <div class="filterbar" id="crewFilter">
+      ${crewsSet.map(cw=>`<button data-crew="${cw}" class="${cw==='all'?'active':''}">${cw==='all'?'همه':crewName(cw)}</button>`).join("")}
+    </div>
+    <div class="grid cols-4" id="charGrid"></div>
+  </section>`;
+  render();
+  $$("#crewFilter button").forEach(b=>b.addEventListener("click", ()=>{
+    $$("#crewFilter button").forEach(x=>x.classList.remove("active")); b.classList.add("active");
+    activeCrew = b.dataset.crew; render();
+  }));
+}
+
+function viewCharacterDetail(id){
+  const c = byId(DATA.characters,id);
+  if(!c){ app.innerHTML = `<div class="wrap"><p class="empty">شخصیت یافت نشد.</p></div>`; return; }
+  setMeta(c.name, c.bio.slice(0,150));
+  injectJSONLD({"@context":"https://schema.org","@type":"Person","name":c.name,"alternateName":c.alias,"description":c.bio});
+  pushRecent("character",c.id,c.name);
+  const relatedArcs = DATA.arcs.filter(a=>a.chars.includes(c.id));
+  app.innerHTML = `
+  <div class="page-hero wrap">
+    ${crumbs([{href:"#/",label:"خانه"},{href:"#/characters",label:"شخصیت‌ها"},{label:c.name}])}
+  </div>
+  <section class="wrap">
+    <div class="detail-grid">
+      <div>
+        <div class="detail-avatar">${initials(c.name)}</div>
+        <button class="btn ghost" style="width:100%;margin-top:14px;" id="favBtn">${isFav("character",c.id)?"★ حذف از علاقه‌مندی‌ها":"☆ افزودن به علاقه‌مندی‌ها"}</button>
+        <table class="stat-table">
+          <tr><td>لقب</td><td>${c.alias}</td></tr>
+          <tr><td>سن</td><td>${c.age}</td></tr>
+          <tr><td>تاریخ تولد</td><td>${c.birthday}</td></tr>
+          <tr><td>قد</td><td>${c.height}</td></tr>
+          <tr><td>میوه‌ی شیطانی</td><td>${c.devilFruit}</td></tr>
+          <tr><td>خدمه/سازمان</td><td><a href="#/crews/${c.crew}">${crewName(c.crew)}</a> (${c.crewRole})</td></tr>
+          <tr><td>جایزه‌ی سری</td><td>${fmtBounty(c.bounty)}</td></tr>
+          <tr><td>شغل</td><td>${c.occupation}</td></tr>
+          <tr><td>وضعیت فعلی</td><td>${c.status}</td></tr>
+          <tr><td>اولین حضور</td><td>${c.firstAppearance}</td></tr>
+        </table>
+      </div>
+      <div>
+        <h1>${c.name}</h1>
+        <div class="tag-row">${c.haki.map(h=>`<span>${h}</span>`).join("")}</div>
+        <div class="bio-block" style="margin-top:20px;">
+          <h3>بیوگرافی</h3><p>${c.bio}</p>
+        </div>
+        <div class="bio-block">
+          <h3>توانایی‌ها</h3>
+          <div class="tag-row">${c.abilities.map(a=>`<span>${a}</span>`).join("")}</div>
+          <h3 style="margin-top:16px;">سلاح‌ها</h3>
+          <div class="tag-row">${c.weapons.map(w=>`<span>${w}</span>`).join("")}</div>
+        </div>
+        <div class="bio-block">
+          <h3>روابط</h3>
+          <div class="tag-row">${c.relationships.map(r=>`<span>${r}</span>`).join("")}</div>
+        </div>
+        ${relatedArcs.length?`<div class="bio-block">
+          <h3>حضور در آرک‌ها</h3>
+          <div class="related-list">${relatedArcs.map(a=>`<a href="#/arcs/${a.id}">${a.name}</a>`).join("")}</div>
+        </div>`:""}
+      </div>
+    </div>
+  </section>`;
+  $("#favBtn").addEventListener("click", ()=>{ toggleFav("character",c.id,c.name); viewCharacterDetail(c.id); });
+}
+
+function viewArcList(){
+  setMeta("آرک‌های وان‌پیس","فهرست کامل ساگاها و آرک‌های داستان وان‌پیس به‌ترتیب زمانی، همراه با قسمت‌ها و فصل‌های مربوطه.");
+  app.innerHTML = `
+  <div class="page-hero wrap">
+    ${crumbs([{href:"#/",label:"خانه"},{label:"آرک‌ها"}])}
+    <div class="eyebrow">مسیر سفر</div>
+    <h1>آرک‌های داستان</h1>
+    <p>سفر خدمه‌ی کلاه‌حصیری از ایست‌بلو تا آخرین رویدادهای دنیای جدید، به‌ترتیب زمانی.</p>
+  </div>
+  <section class="wrap">
+    <div class="route">
+      ${DATA.arcs.map(a=>`<div class="route-item">
+        <span class="eb">قسمت ${a.episodes}</span>
+        <h3><a href="#/arcs/${a.id}">${a.name}</a></h3>
+        <p>${a.summary}</p>
+      </div>`).join("")}
+    </div>
+  </section>`;
+}
+
+function viewArcDetail(id){
+  const a = byId(DATA.arcs,id);
+  if(!a){ app.innerHTML = `<div class="wrap"><p class="empty">آرک یافت نشد.</p></div>`; return; }
+  setMeta(a.name, a.summary.slice(0,150));
+  pushRecent("arc",a.id,a.name);
+  app.innerHTML = `
+  <div class="page-hero wrap">
+    ${crumbs([{href:"#/",label:"خانه"},{href:"#/arcs",label:"آرک‌ها"},{label:a.name}])}
+    <h1>${a.name}</h1>
+  </div>
+  <section class="wrap">
+    <div class="detail-grid">
+      <div>
+        <table class="stat-table">
+          <tr><td>قسمت‌ها</td><td>${a.episodes}</td></tr>
+          <tr><td>فصل‌های مانگا</td><td>${a.chapters}</td></tr>
+          <tr><td>وضعیت</td><td>${a.canon}</td></tr>
+        </table>
+        ${a.battles.length?`<div class="bio-block" style="margin-top:16px;"><h3>نبردهای مهم</h3><div class="tag-row">${a.battles.map(b=>`<span>${b}</span>`).join("")}</div></div>`:""}
+      </div>
+      <div>
+        <div class="bio-block"><h3>خلاصه‌ی داستان</h3><p>${a.summary}</p></div>
+        <div class="bio-block"><h3>رویدادهای مهم</h3><div class="tag-row">${a.events.map(e=>`<span>${e}</span>`).join("")}</div></div>
+        <div class="bio-block"><h3>شخصیت‌های اصلی</h3><div class="related-list">${a.chars.map(cid=>`<a href="#/characters/${cid}">${charName(cid)}</a>`).join("")}</div></div>
+      </div>
+    </div>
+  </section>`;
+}
+
+function viewFruitList(){
+  setMeta("میوه‌های شیطانی وان‌پیس","پایگاه‌داده‌ی میوه‌های شیطانی وان‌پیس شامل نوع، کاربر، توانایی و نقاط ضعف هر میوه.");
+  app.innerHTML = `
+  <div class="page-hero wrap">
+    ${crumbs([{href:"#/",label:"خانه"},{label:"میوه‌های شیطانی"}])}
+    <div class="eyebrow">قدرت‌های دنیا</div>
+    <h1>میوه‌های شیطانی</h1>
+    <p>میوه‌های شیطانی در سه دسته‌ی اصلی پارامیشیا، زوآن و لوگیا جای می‌گیرند و به خورنده قدرتی غیرعادی می‌بخشند.</p>
+  </div>
+  <section class="wrap">
+    <div class="filterbar" id="fruitFilter">
+      ${["all","پارامیشیا","زوآن","لوگیا"].map(t=>`<button data-t="${t}" class="${t==='all'?'active':''}">${t==='all'?'همه':t}</button>`).join("")}
+    </div>
+    <div class="grid cols-4" id="fruitGrid">${DATA.devilFruits.map(fruitCard).join("")}</div>
+  </section>`;
+  $$("#fruitFilter button").forEach(b=>b.addEventListener("click", ()=>{
+    $$("#fruitFilter button").forEach(x=>x.classList.remove("active")); b.classList.add("active");
+    const t=b.dataset.t;
+    const list = t==="all"?DATA.devilFruits:DATA.devilFruits.filter(f=>f.type.includes(t));
+    $("#fruitGrid").innerHTML = list.map(fruitCard).join("");
+  }));
+}
+
+function viewFruitDetail(id){
+  const f = byId(DATA.devilFruits,id);
+  if(!f){ app.innerHTML = `<div class="wrap"><p class="empty">میوه یافت نشد.</p></div>`; return; }
+  setMeta(f.name, f.abilities.slice(0,150));
+  pushRecent("fruit",f.id,f.name);
+  const owner = byId(DATA.characters,f.user);
+  app.innerHTML = `
+  <div class="page-hero wrap">
+    ${crumbs([{href:"#/",label:"خانه"},{href:"#/devil-fruits",label:"میوه‌های شیطانی"},{label:f.name}])}
+    <h1>${f.name}</h1>
+    <p>${f.nameEn}</p>
+  </div>
+  <section class="wrap">
+    <div class="detail-grid">
+      <div>
+        <table class="stat-table">
+          <tr><td>نوع</td><td>${f.type}</td></tr>
+          <tr><td>کاربر</td><td>${owner?`<a href="#/characters/${owner.id}">${owner.name}</a>`:f.user}</td></tr>
+          <tr><td>بیدارشده</td><td>${f.awakening}</td></tr>
+          <tr><td>اولین حضور</td><td>${f.firstAppearance}</td></tr>
+        </table>
+      </div>
+      <div>
+        <div class="bio-block"><h3>توانایی‌ها</h3><p>${f.abilities}</p></div>
+        <div class="bio-block"><h3>نقاط ضعف</h3><p>${f.weaknesses}</p></div>
+      </div>
+    </div>
+  </section>`;
+}
+
+function viewHaki(){
+  setMeta("هاکی در وان‌پیس","توضیح کامل انواع هاکی در وان‌پیس: هاکی مشاهده، هاکی مسلح و هاکی فرمانروایی به همراه کاربران شناخته‌شده.");
+  app.innerHTML = `
+  <div class="page-hero wrap">
+    ${crumbs([{href:"#/",label:"خانه"},{label:"هاکی"}])}
+    <div class="eyebrow">نیروی نهفته</div>
+    <h1>هاکی</h1>
+    <p>${DATA.haki.intro}</p>
+  </div>
+  <section class="wrap">
+    <div class="grid cols-3">
+      ${DATA.haki.types.map(t=>`<div class="card"><h3>${t.name}</h3><p class="meta" style="margin-top:8px;">${t.desc}</p></div>`).join("")}
+    </div>
+    <div class="bio-block" style="margin-top:30px;"><h3>تکنیک‌های پیشرفته</h3><p>${DATA.haki.advanced}</p></div>
+    <div class="bio-block"><h3>کاربران شناخته‌شده</h3><div class="related-list">${DATA.haki.knownUsers.map(id=>`<a href="#/characters/${id}">${charName(id)}</a>`).join("")}</div></div>
+  </section>`;
+}
+
+function viewBounties(){
+  setMeta("رتبه‌بندی جوایز سری وان‌پیس","فهرست شخصیت‌های وان‌پیس بر اساس بالاترین جایزه‌ی سری، از امپراتوران دریا تا دزدان دریایی نوظهور.");
+  const ranked = [...DATA.characters].filter(c=>c.bounty>0).sort((a,b)=>b.bounty-a.bounty);
+  app.innerHTML = `
+  <div class="page-hero wrap">
+    ${crumbs([{href:"#/",label:"خانه"},{label:"جوایز سری"}])}
+    <div class="eyebrow">رتبه‌بندی</div>
+    <h1>جوایز سری (بونتی)</h1>
+    <p>جایزه‌ی سری میزانی از خطرناک‌بودن یک دزد دریایی از دید دولت جهانی را نشان می‌دهد.</p>
+  </div>
+  <section class="wrap">
+    <div class="card" style="padding:0;">
+      ${ranked.map((c,i)=>`<div class="lb-row">
+        <div class="lb-rank">${i+1}</div>
+        <div class="avatar" style="margin:0; aspect-ratio:auto; width:56px; height:56px; font-size:1.1rem;">${initials(c.name)}</div>
+        <div><a href="#/characters/${c.id}"><h3 style="margin:0;">${c.name}</h3></a><div class="meta">${crewName(c.crew)}</div></div>
+        <div class="bounty-amt">${fmtBounty(c.bounty)}</div>
+      </div>`).join("")}
+    </div>
+  </section>`;
+}
+
+function viewCrewList(){
+  setMeta("خدمه‌ها و سازمان‌های وان‌پیس","فهرست کامل خدمه‌های دزدان دریایی، نیروی دریایی و سازمان‌های مهم دنیای وان‌پیس.");
+  app.innerHTML = `
+  <div class="page-hero wrap">
+    ${crumbs([{href:"#/",label:"خانه"},{label:"خدمه‌ها و سازمان‌ها"}])}
+    <div class="eyebrow">نیروهای دنیا</div>
+    <h1>خدمه‌ها و سازمان‌ها</h1>
+    <p>از دزدان دریایی کلاه‌حصیری تا نیروی دریایی و ارتش انقلابی — نیروهای اصلی دنیای وان‌پیس.</p>
+  </div>
+  <section class="wrap"><div class="grid cols-4">${DATA.crews.map(crewCard).join("")}</div></section>`;
+}
+
+function viewCrewDetail(id){
+  const c = byId(DATA.crews,id);
+  if(!c){ app.innerHTML = `<div class="wrap"><p class="empty">یافت نشد.</p></div>`; return; }
+  setMeta(c.name, c.desc.slice(0,150));
+  app.innerHTML = `
+  <div class="page-hero wrap">
+    ${crumbs([{href:"#/",label:"خانه"},{href:"#/crews",label:"خدمه‌ها"},{label:c.name}])}
+    <h1>${c.name}</h1>
+  </div>
+  <section class="wrap">
+    <div class="bio-block"><h3>معرفی</h3><p>${c.desc}</p></div>
+    <table class="stat-table" style="max-width:400px;">
+      <tr><td>نوع</td><td>${c.type}</td></tr>
+      <tr><td>رهبر</td><td><a href="#/characters/${c.leader}">${charName(c.leader)}</a></td></tr>
+    </table>
+    <div class="bio-block" style="margin-top:20px;"><h3>اعضای شناخته‌شده</h3><div class="grid cols-4">${c.members.map(mid=>{ const m=byId(DATA.characters,mid); return m?charCard(m):""; }).join("")}</div></div>
+  </section>`;
+  bindFavButtons();
+}
+
+function viewBattles(){
+  setMeta("نبردهای مهم وان‌پیس","فهرست مهم‌ترین نبردهای وان‌پیس همراه با شرکت‌کنندگان، مکان و نتیجه‌ی هر نبرد.");
+  app.innerHTML = `
+  <div class="page-hero wrap">
+    ${crumbs([{href:"#/",label:"خانه"},{label:"نبردها"}])}
+    <div class="eyebrow">لحظات نبرد</div>
+    <h1>نبردهای مهم</h1>
+  </div>
+  <section class="wrap">
+    <div class="table-wrap"><table class="datatable">
+      <thead><tr><th>نبرد</th><th>آرک</th><th>مکان</th><th>طرفین</th><th>نتیجه</th></tr></thead>
+      <tbody>${DATA.battles.map(b=>`<tr>
+        <td><a href="#/arcs/${b.arc}">${b.name}</a></td>
+        <td>${arcName(b.arc)}</td><td>${b.location}</td><td>${b.participants}</td><td>${b.result}</td>
+      </tr>`).join("")}</tbody>
+    </table></div>
+  </section>`;
+}
+
+function viewEpisodes(){
+  setMeta("قسمت‌های انیمه‌ی وان‌پیس","پایگاه‌داده‌ی قسمت‌های انیمه‌ی وان‌پیس همراه با شماره، تاریخ پخش، آرک و وضعیت کانن یا فیلر.");
+  app.innerHTML = `
+  <div class="page-hero wrap">
+    ${crumbs([{href:"#/",label:"خانه"},{label:"قسمت‌ها"}])}
+    <div class="eyebrow">پایگاه‌داده</div>
+    <h1>قسمت‌های انیمه</h1>
+    <p>نمونه‌ای از قسمت‌های کلیدی هر آرک؛ این پایگاه‌داده برای افزودن تمام ۱۱۰۰+ قسمت قابل گسترش است.</p>
+  </div>
+  <section class="wrap">
+    <div class="table-wrap"><table class="datatable">
+      <thead><tr><th>#</th><th>عنوان</th><th>تاریخ پخش</th><th>آرک</th><th>فصل معادل</th><th>وضعیت</th></tr></thead>
+      <tbody>${DATA.episodes.map(e=>`<tr>
+        <td>${e.num}</td><td>${e.title}</td><td>${e.date}</td>
+        <td><a href="#/arcs/${e.arc}">${arcName(e.arc)}</a></td><td>#${e.chapter}</td>
+        <td><span class="badge ${e.canon?'canon':'filler'}">${e.canon?'کانن':'فیلر'}</span></td>
+      </tr>`).join("")}</tbody>
+    </table></div>
+  </section>`;
+}
+
+function viewManga(){
+  setMeta("فصل‌های مانگای وان‌پیس","پایگاه‌داده‌ی فصل‌های مانگای وان‌پیس همراه با خلاصه و رویدادهای مهم هر فصل.");
+  app.innerHTML = `
+  <div class="page-hero wrap">
+    ${crumbs([{href:"#/",label:"خانه"},{label:"مانگا"}])}
+    <div class="eyebrow">پایگاه‌داده</div>
+    <h1>فصل‌های مانگا</h1>
+    <p>نمونه‌ای از فصل‌های کلیدی هر آرک؛ قابل‌گسترش تا کامل‌کردن بیش از ۱۱۰۰ فصل.</p>
+  </div>
+  <section class="wrap">
+    <div class="table-wrap"><table class="datatable">
+      <thead><tr><th>#</th><th>عنوان</th><th>آرک</th><th>خلاصه</th></tr></thead>
+      <tbody>${DATA.manga.map(m=>`<tr>
+        <td>${m.num}</td><td>${m.title}</td><td><a href="#/arcs/${m.arc}">${arcName(m.arc)}</a></td><td>${m.summary}</td>
+      </tr>`).join("")}</tbody>
+    </table></div>
+  </section>`;
+}
+
+function viewCompare(){
+  setMeta("مقایسه‌ی شخصیت‌های وان‌پیس","دو شخصیت وان‌پیس را انتخاب کنید و ویژگی‌ها، توانایی‌ها و جوایز سری آنها را مقایسه کنید.");
+  const opts = DATA.characters.map(c=>`<option value="${c.id}">${c.name}</option>`).join("");
+  app.innerHTML = `
+  <div class="page-hero wrap">
+    ${crumbs([{href:"#/",label:"خانه"},{label:"مقایسه"}])}
+    <div class="eyebrow">ابزار</div>
+    <h1>مقایسه‌ی شخصیت‌ها</h1>
+    <p>دو شخصیت را انتخاب کنید تا ویژگی‌های آنها در کنار هم نمایش داده شود.</p>
+  </div>
+  <section class="wrap">
+    <div class="compare-picker">
+      <select id="cmpA"><option value="">— شخصیت اول —</option>${opts}</select>
+      <select id="cmpB"><option value="">— شخصیت دوم —</option>${opts}</select>
+    </div>
+    <div id="cmpResult"></div>
+  </section>`;
+  function renderCmp(){
+    const a = byId(DATA.characters,$("#cmpA").value), b = byId(DATA.characters,$("#cmpB").value);
+    if(!a||!b){ $("#cmpResult").innerHTML = `<p class="empty">هر دو شخصیت را انتخاب کنید.</p>`; return; }
+    const rows = [
+      ["لقب", a.alias, b.alias], ["سن", a.age, b.age], ["قد", a.height, b.height],
+      ["میوه‌ی شیطانی", a.devilFruit, b.devilFruit], ["هاکی", a.haki.join("، ")||"—", b.haki.join("، ")||"—"],
+      ["خدمه", crewName(a.crew), crewName(b.crew)], ["جایزه‌ی سری", fmtBounty(a.bounty), fmtBounty(b.bounty)],
+      ["وضعیت", a.status, b.status]
+    ];
+    $("#cmpResult").innerHTML = `<div class="table-wrap"><table class="datatable">
+      <thead><tr><th>${a.name}</th><th>ویژگی</th><th>${b.name}</th></tr></thead>
+      <tbody>${rows.map(r=>`<tr><td>${r[1]}</td><td style="color:var(--gold-2)">${r[0]}</td><td>${r[2]}</td></tr>`).join("")}</tbody>
+    </table></div>`;
+  }
+  $("#cmpA").addEventListener("change", renderCmp);
+  $("#cmpB").addEventListener("change", renderCmp);
+}
+
+function viewFavorites(){
+  setMeta("علاقه‌مندی‌های من","فهرست شخصیت‌ها و صفحاتی که در وان‌پدیا به علاقه‌مندی‌ها اضافه کرده‌اید.");
+  const favs = getFavs();
+  const recent = getRecent();
+  app.innerHTML = `
+  <div class="page-hero wrap">
+    ${crumbs([{href:"#/",label:"خانه"},{label:"علاقه‌مندی‌ها"}])}
+    <div class="eyebrow">شخصی‌سازی</div>
+    <h1>علاقه‌مندی‌های من</h1>
+  </div>
+  <section class="wrap">
+    <div class="section-head"><h2>ذخیره‌شده‌ها</h2></div>
+    ${favs.length? `<div class="grid cols-4">${favs.map(f=>{
+        if(f.type==="character"){ const c=byId(DATA.characters,f.id); return c?charCard(c):""; }
+        return `<a class="card" href="#/${f.type}s/${f.id}"><h3>${f.label}</h3></a>`;
+      }).join("")}</div>` : `<p class="empty">هنوز چیزی به علاقه‌مندی‌ها اضافه نکرده‌اید. روی آیکون ☆ کنار هر شخصیت بزنید.</p>`}
+    <div class="section-head" style="margin-top:44px;"><h2>اخیراً مشاهده‌شده</h2></div>
+    ${recent.length? `<div class="related-list">${recent.map(r=>`<a href="#/${r.type}s/${r.id}">${r.label}</a>`).join("")}</div>` : `<p class="empty">تاریخچه‌ای وجود ندارد.</p>`}
+  </section>`;
+  bindFavButtons();
+}
+
+function view404(){
+  app.innerHTML = `<div class="wrap" style="padding:80px 0; text-align:center;">
+    <h1 style="color:var(--gold-2);">صفحه یافت نشد</h1>
+    <p class="meta">این صفحه در نقشه‌ی ما نیست. <a href="#/" style="color:var(--gold);">بازگشت به خانه</a></p>
+  </div>`;
+}
+
+/* =========================================================
+   روتر
+   ========================================================= */
+function bindFavButtons(){
+  $$("[data-fav]").forEach(btn=>{
+    btn.addEventListener("click",(e)=>{
+      e.preventDefault();
+      const [type,id,label] = btn.dataset.fav.split(":");
+      toggleFav(type,id,label);
+      btn.classList.toggle("active");
+      btn.textContent = btn.classList.contains("active") ? "★" : "☆";
+    });
+  });
+}
+
+function router(){
+  const hash = location.hash.replace(/^#/,"") || "/";
+  const parts = hash.split("/").filter(Boolean);
+  window.scrollTo(0,0);
+  $$("nav.mainnav a").forEach(a=> a.classList.toggle("active", a.getAttribute("href")==="#/"+parts[0]));
+  $("#mainNav").classList.remove("open");
+
+  if(parts.length===0){ viewHome(); return; }
+  const [section,slug] = parts;
+  switch(section){
+    case "characters": slug? viewCharacterDetail(slug) : viewCharacterList(); break;
+    case "arcs": slug? viewArcDetail(slug) : viewArcList(); break;
+    case "devil-fruits": slug? viewFruitDetail(slug) : viewFruitList(); break;
+    case "crews": slug? viewCrewDetail(slug) : viewCrewList(); break;
+    case "haki": viewHaki(); break;
+    case "bounties": viewBounties(); break;
+    case "battles": viewBattles(); break;
+    case "episodes": viewEpisodes(); break;
+    case "manga": viewManga(); break;
+    case "compare": viewCompare(); break;
+    case "favorites": viewFavorites(); break;
+    default: view404();
+  }
+  bindFavButtons();
+}
+window.addEventListener("hashchange", router);
+window.addEventListener("DOMContentLoaded", ()=>{
+  router();
+  const saved = localStorage.getItem("op_theme");
+  if(saved==="light"){ document.body.setAttribute("data-theme","light"); }
+  $("#themeToggle").addEventListener("click", ()=>{
+    const cur = document.body.getAttribute("data-theme");
+    const next = cur==="light" ? "dark" : "light";
+    document.body.setAttribute("data-theme", next);
+    localStorage.setItem("op_theme", next);
+  });
+  $("#hamburgerBtn").addEventListener("click", ()=> $("#mainNav").classList.toggle("open"));
+  const ts = $("#topSearch"), tr = $("#searchResults");
+  ts.addEventListener("input", ()=>{
+    const res = searchIndex(ts.value);
+    tr.innerHTML = res.length? res.map(r=>`<a href="${r.href}">${r.label}<span class="tag">${r.type}</span></a>`).join("") : `<div style="padding:14px;color:var(--muted);font-size:.85rem;">نتیجه‌ای یافت نشد</div>`;
+    tr.classList.toggle("show", ts.value.trim().length>0);
+  });
+  document.addEventListener("click",(e)=>{
+    if(!e.target.closest(".searchbox")){ $$(".search-results").forEach(r=>r.classList.remove("show")); }
+  });
+});
+</script>
+</body>
+</html>
